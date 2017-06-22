@@ -11726,7 +11726,9 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}@media print {
+}
+
+@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11747,7 +11749,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11771,7 +11773,8 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11783,7 +11786,8 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11798,7 +11802,8 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11808,7 +11813,8 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11837,7 +11843,8 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11866,9 +11873,7 @@ div#notebook {
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[2]:</div>
-
 
 
 
@@ -11879,9 +11884,7 @@ div#notebook {
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -12257,7 +12260,8 @@ UrigmJlZKVxQzMysFC4oZmZWiv8D0ajmVqfhrowAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12266,17 +12270,18 @@ $$s_{0},s_{1},s_{2},...,s_{P}$$<p>where $s_{p}$ is the numerical value of the ti
 <p><img src="images/timeseries_windowing_training.gif" width=600 height=600/></p>
 <p>For example - using a window of size T = 5 (as illustrated in the gif above) we produce a set of input/output pairs like the one shown in the table below</p>
 $$\begin{array}{c|c}
-\text{Input} &amp; \text{Output}\\
-\hline \color{CornflowerBlue} {\langle s_{1},s_{2},s_{3},s_{4},s_{5}\rangle} &amp; \color{Goldenrod}{ s_{6}} \\
-\ \color{CornflowerBlue} {\langle s_{2},s_{3},s_{4},s_{5},s_{6} \rangle } &amp; \color{Goldenrod} {s_{7} } \\
-\color{CornflowerBlue}  {\vdots} &amp; \color{Goldenrod} {\vdots}\\
-\color{CornflowerBlue} { \langle s_{P-5},s_{P-4},s_{P-3},s_{P-2},s_{P-1} \rangle } &amp; \color{Goldenrod} {s_{P}}
+\text{Input} & \text{Output}\\
+\hline \color{CornflowerBlue} {\langle s_{1},s_{2},s_{3},s_{4},s_{5}\rangle} & \color{Goldenrod}{ s_{6}} \\
+\ \color{CornflowerBlue} {\langle s_{2},s_{3},s_{4},s_{5},s_{6} \rangle } & \color{Goldenrod} {s_{7} } \\
+\color{CornflowerBlue}  {\vdots} & \color{Goldenrod} {\vdots}\\
+\color{CornflowerBlue} { \langle s_{P-5},s_{P-4},s_{P-3},s_{P-2},s_{P-1} \rangle } & \color{Goldenrod} {s_{P}}
 \end{array}$$<p>Notice here that each input is a sequence (or vector) of length 4 (and in general has length equal to the window size T) while each corresponding output is a scalar value.  Notice also how given a time series of length P and window size T = 5 as shown above, we created P - 5  input/output pairs.  More generally, for a window size T we create P - T such pairs.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12318,7 +12323,8 @@ $$\begin{array}{c|c}
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12340,7 +12346,8 @@ $$\begin{array}{c|c}
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12380,9 +12387,7 @@ $$\begin{array}{c|c}
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>--- the input X will look like ----
@@ -12409,7 +12414,8 @@ the type of y is &lt;class &#39;numpy.ndarray&#39;&gt;
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12420,7 +12426,8 @@ the type of y is &lt;class &#39;numpy.ndarray&#39;&gt;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12444,7 +12451,8 @@ the type of y is &lt;class &#39;numpy.ndarray&#39;&gt;
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12481,7 +12489,8 @@ the type of y is &lt;class &#39;numpy.ndarray&#39;&gt;
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12536,9 +12545,7 @@ the type of y is &lt;class &#39;numpy.ndarray&#39;&gt;
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Using TensorFlow backend.
@@ -12550,7 +12557,8 @@ the type of y is &lt;class &#39;numpy.ndarray&#39;&gt;
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12577,9 +12585,7 @@ the type of y is &lt;class &#39;numpy.ndarray&#39;&gt;
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Epoch 1/1000
@@ -14587,9 +14593,7 @@ Epoch 1000/1000
 </div>
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[9]:</div>
-
 
 
 
@@ -14603,7 +14607,8 @@ Epoch 1000/1000
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14627,7 +14632,8 @@ Epoch 1000/1000
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14663,9 +14669,7 @@ Epoch 1000/1000
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>training error = 0.0159912935712
@@ -14678,7 +14682,8 @@ testing error = 0.0139957363826
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14722,9 +14727,7 @@ testing error = 0.0139957363826
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -15250,7 +15253,8 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15259,7 +15263,8 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15267,7 +15272,8 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15290,7 +15296,8 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15301,7 +15308,7 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># read in the text, transforming everything to lower case</span>
@@ -15318,9 +15325,7 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>our original text has 581864 characters
@@ -15332,7 +15337,8 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15343,7 +15349,7 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### print out the first 1000 characters of the raw text to get a sense of what we need to throw out</span>
@@ -15359,9 +15365,7 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 
 
 <div class="output_area">
-
-<div class="prompt output_prompt">Out[2]:</div>
-
+<div class="prompt output_prompt">Out[104]:</div>
 
 
 
@@ -15375,7 +15379,8 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15387,11 +15392,11 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### find and replace &#39;\n&#39; and &#39;\r&#39; symbols - replacing them </span>
-<span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="mi">1302</span><span class="p">:]</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="mi">1195</span><span class="p">:]</span>
 <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span>    <span class="c1"># replacing &#39;\n&#39; with &#39;&#39; simply removes the sequence</span>
 <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 </pre></div>
@@ -15401,7 +15406,8 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15412,7 +15418,7 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### print out the first 1000 characters of the raw text to get a sense of what we need to throw out</span>
@@ -15428,14 +15434,12 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 
 
 <div class="output_area">
-
-<div class="prompt output_prompt">Out[4]:</div>
-
+<div class="prompt output_prompt">Out[106]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#34;is eyes she eclipses and predominates the whole of her sex. it was not that he felt any emotion akin to love for irene adler. all emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. he was, i take it, the most perfect reasoning and observing machine that the world has seen, but as a lover he would have placed himself in a false position. he never spoke of the softer passions, save with a gibe and a sneer. they were admirable things for the observer--excellent for drawing the veil from men&#39;s motives and actions. but for the trained reasoner to admit such intrusions into his own delicate and finely adjusted temperament was to introduce a distracting factor which might throw a doubt upon all his mental results. grit in a sensitive instrument, or a crack in one of his own high-power lenses, would not be more disturbing than a strong emotion in a nature such as his. and yet there was but one woman to him, and that woman was the late irene ad&#34;</pre>
+<pre>&#34; to sherlock holmes she is always the woman. i have seldom heard him mention her under any other name. in his eyes she eclipses and predominates the whole of her sex. it was not that he felt any emotion akin to love for irene adler. all emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. he was, i take it, the most perfect reasoning and observing machine that the world has seen, but as a lover he would have placed himself in a false position. he never spoke of the softer passions, save with a gibe and a sneer. they were admirable things for the observer--excellent for drawing the veil from men&#39;s motives and actions. but for the trained reasoner to admit such intrusions into his own delicate and finely adjusted temperament was to introduce a distracting factor which might throw a doubt upon all his mental results. grit in a sensitive instrument, or a crack in one of his own high-power lenses, would not be more disturbing than a strong em&#34;</pre>
 </div>
 
 </div>
@@ -15444,7 +15448,8 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15457,27 +15462,29 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### ist all unique characters in the text and remove any non-english ones</span>
 <span class="c1"># find all unique characters in the text</span>
-<span class="n">uniques</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-<span class="c1">#print(uniques)</span>
+<span class="n">uniques</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Characters in the original text:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">uniques</span><span class="p">)</span>
 
 <span class="c1"># remove as many non-english characters and character sequences as you can </span>
 
-<span class="c1"># get all valid characters (alphabets, digits, punctuation)</span>
+<span class="c1"># get all valid characters (lowercase letters, punctuation, space)</span>
 <span class="kn">import</span> <span class="nn">string</span>
-<span class="n">valid_characters</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span><span class="p">)</span>
-<span class="n">valid_characters</span> <span class="o">=</span> <span class="n">valid_characters</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">digits</span><span class="p">)</span>
-<span class="n">valid_characters</span> <span class="o">=</span> <span class="n">valid_characters</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">)</span>
-<span class="n">valid_characters</span> <span class="o">=</span> <span class="n">valid_characters</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">whitespace</span><span class="p">)</span>
-<span class="c1">#print(valid_characters)</span>
+<span class="n">valid_characters</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span><span class="p">)</span>
+<span class="n">valid_characters</span> <span class="o">=</span> <span class="n">valid_characters</span> <span class="o">+</span> <span class="nb">list</span><span class="p">([</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;&amp;&#39;</span><span class="p">,</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;(&#39;</span><span class="p">,</span> <span class="s1">&#39;)&#39;</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">])</span>
+<span class="n">valid_characters</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">valid_characters</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Characters considered to be valid:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">valid_characters</span><span class="p">)</span>
 
 <span class="c1"># determine characters to be removed</span>
-<span class="n">invalid_characters</span> <span class="o">=</span> <span class="n">uniques</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">valid_characters</span><span class="p">)</span>
-<span class="c1">#print(invalid_characters)</span>
+<span class="n">invalid_characters</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">uniques</span><span class="p">)</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">valid_characters</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Characters considered to be invalid which will be removed from the text:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">invalid_characters</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">invalid_characters</span><span class="p">:</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
     
@@ -15489,8 +15496,30 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Characters in the original text:
+[&#39; &#39;, &#39;!&#39;, &#39;&#34;&#39;, &#39;$&#39;, &#39;%&#39;, &#39;&amp;&#39;, &#34;&#39;&#34;, &#39;(&#39;, &#39;)&#39;, &#39;*&#39;, &#39;,&#39;, &#39;-&#39;, &#39;.&#39;, &#39;/&#39;, &#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;:&#39;, &#39;;&#39;, &#39;?&#39;, &#39;@&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;, &#39;j&#39;, &#39;k&#39;, &#39;l&#39;, &#39;m&#39;, &#39;n&#39;, &#39;o&#39;, &#39;p&#39;, &#39;q&#39;, &#39;r&#39;, &#39;s&#39;, &#39;t&#39;, &#39;u&#39;, &#39;v&#39;, &#39;w&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;, &#39;à&#39;, &#39;â&#39;, &#39;è&#39;, &#39;é&#39;]
+Characters considered to be valid:
+[&#39; &#39;, &#39;!&#39;, &#39;&#34;&#39;, &#39;&amp;&#39;, &#34;&#39;&#34;, &#39;(&#39;, &#39;)&#39;, &#39;,&#39;, &#39;-&#39;, &#39;.&#39;, &#39;:&#39;, &#39;;&#39;, &#39;?&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;, &#39;j&#39;, &#39;k&#39;, &#39;l&#39;, &#39;m&#39;, &#39;n&#39;, &#39;o&#39;, &#39;p&#39;, &#39;q&#39;, &#39;r&#39;, &#39;s&#39;, &#39;t&#39;, &#39;u&#39;, &#39;v&#39;, &#39;w&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;]
+Characters considered to be invalid which will be removed from the text:
+{&#39;2&#39;, &#39;$&#39;, &#39;6&#39;, &#39;@&#39;, &#39;0&#39;, &#39;è&#39;, &#39;*&#39;, &#39;/&#39;, &#39;9&#39;, &#39;à&#39;, &#39;5&#39;, &#39;3&#39;, &#39;%&#39;, &#39;1&#39;, &#39;7&#39;, &#39;4&#39;, &#39;â&#39;, &#39;8&#39;, &#39;é&#39;}
+</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15501,7 +15530,7 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### print out the first 2000 characters of the raw text to get a sense of what we need to throw out</span>
@@ -15517,14 +15546,12 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 
 
 <div class="output_area">
-
-<div class="prompt output_prompt">Out[6]:</div>
-
+<div class="prompt output_prompt">Out[108]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#34;is eyes she eclipses and predominates the whole of her sex. it was not that he felt any emotion akin to love for irene adler. all emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. he was, i take it, the most perfect reasoning and observing machine that the world has seen, but as a lover he would have placed himself in a false position. he never spoke of the softer passions, save with a gibe and a sneer. they were admirable things for the observer--excellent for drawing the veil from men&#39;s motives and actions. but for the trained reasoner to admit such intrusions into his own delicate and finely adjusted temperament was to introduce a distracting factor which might throw a doubt upon all his mental results. grit in a sensitive instrument, or a crack in one of his own high-power lenses, would not be more disturbing than a strong emotion in a nature such as his. and yet there was but one woman to him, and that woman was the late irene adler, of dubious and questionable memory. i had seen little of holmes lately. my marriage had drifted us away from each other. my own complete happiness, and the home-centred interests which rise up around the man who first finds himself master of his own establishment, were sufficient to absorb all my attention, while holmes, who loathed every form of society with his whole bohemian soul, remained in our lodgings in baker street, buried among his old books, and alternating from week to week between cocaine and ambition, the drowsiness of the drug, and the fierce energy of his own keen nature. he was still, as ever, deeply attracted by the study of crime, and occupied his immense faculties and extraordinary powers of observation in following out those clues, and clearing up those mysteries which had been abandoned as hopeless by the official police. from time to time i heard some vague account of his doings: of his summons to odessa in the case of the trepoff murder, of his clearing up &#34;</pre>
+<pre>&#34; to sherlock holmes she is always the woman. i have seldom heard him mention her under any other name. in his eyes she eclipses and predominates the whole of her sex. it was not that he felt any emotion akin to love for irene adler. all emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. he was, i take it, the most perfect reasoning and observing machine that the world has seen, but as a lover he would have placed himself in a false position. he never spoke of the softer passions, save with a gibe and a sneer. they were admirable things for the observer--excellent for drawing the veil from men&#39;s motives and actions. but for the trained reasoner to admit such intrusions into his own delicate and finely adjusted temperament was to introduce a distracting factor which might throw a doubt upon all his mental results. grit in a sensitive instrument, or a crack in one of his own high-power lenses, would not be more disturbing than a strong emotion in a nature such as his. and yet there was but one woman to him, and that woman was the late irene adler, of dubious and questionable memory. i had seen little of holmes lately. my marriage had drifted us away from each other. my own complete happiness, and the home-centred interests which rise up around the man who first finds himself master of his own establishment, were sufficient to absorb all my attention, while holmes, who loathed every form of society with his whole bohemian soul, remained in our lodgings in baker street, buried among his old books, and alternating from week to week between cocaine and ambition, the drowsiness of the drug, and the fierce energy of his own keen nature. he was still, as ever, deeply attracted by the study of crime, and occupied his immense faculties and extraordinary powers of observation in following out those clues, and clearing up those mysteries which had been abandoned as hopeless by the official police. from time to time i heard some v&#34;</pre>
 </div>
 
 </div>
@@ -15533,7 +15560,8 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15544,7 +15572,7 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># count the number of unique characters in the text</span>
@@ -15564,13 +15592,11 @@ BMAYY4xpgf5/TMs8n+JpZ4gAAAAASUVORK5CYII=
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
 
-
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>this corpus has 577662 total number of characters
-this corpus has 54 unique characters
+<pre>this corpus has 577178 total number of characters
+this corpus has 39 unique characters
 </pre>
 </div>
 </div>
@@ -15579,7 +15605,8 @@ this corpus has 54 unique characters
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15590,17 +15617,18 @@ this corpus has 54 unique characters
 <p>More formally lets denote our text corpus - which is one long string of characters - as follows</p>
 $$s_{0},s_{1},s_{2},...,s_{P}$$<p>where $P$ is the length of the text (again for our text $P \approx 500,000!$).  Sliding a window of size T = 5 with a step length of M = 1 (these are the parameters shown in the gif above) over this sequence produces the following list of input/output pairs</p>
 $$\begin{array}{c|c}
-\text{Input} &amp; \text{Output}\\
-\hline \color{CornflowerBlue} {\langle s_{1},s_{2},s_{3},s_{4},s_{5}\rangle} &amp; \color{Goldenrod}{ s_{6}} \\
-\ \color{CornflowerBlue} {\langle s_{2},s_{3},s_{4},s_{5},s_{6} \rangle } &amp; \color{Goldenrod} {s_{7} } \\
-\color{CornflowerBlue}  {\vdots} &amp; \color{Goldenrod} {\vdots}\\
-\color{CornflowerBlue} { \langle s_{P-5},s_{P-4},s_{P-3},s_{P-2},s_{P-1} \rangle } &amp; \color{Goldenrod} {s_{P}}
+\text{Input} & \text{Output}\\
+\hline \color{CornflowerBlue} {\langle s_{1},s_{2},s_{3},s_{4},s_{5}\rangle} & \color{Goldenrod}{ s_{6}} \\
+\ \color{CornflowerBlue} {\langle s_{2},s_{3},s_{4},s_{5},s_{6} \rangle } & \color{Goldenrod} {s_{7} } \\
+\color{CornflowerBlue}  {\vdots} & \color{Goldenrod} {\vdots}\\
+\color{CornflowerBlue} { \langle s_{P-5},s_{P-4},s_{P-3},s_{P-2},s_{P-1} \rangle } & \color{Goldenrod} {s_{P}}
 \end{array}$$<p>Notice here that each input is a sequence (or vector) of 4 characters (and in general has length equal to the window size T) while each corresponding output is a single character.  We created around P total number of input/output pairs  (for general step size M we create around ceil(P/M) pairs).</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15614,7 +15642,7 @@ $$\begin{array}{c|c}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### fill out the function below that transforms the input text and window-size into a set of input/output pairs for use with our RNN model</span>
@@ -15637,7 +15665,8 @@ $$\begin{array}{c|c}
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15648,7 +15677,7 @@ $$\begin{array}{c|c}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run your text window-ing function </span>
@@ -15662,7 +15691,8 @@ $$\begin{array}{c|c}
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15673,7 +15703,7 @@ $$\begin{array}{c|c}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># print out a few of the input/output pairs to verify that we&#39;ve made the right kind of stuff to learn from</span>
@@ -15693,16 +15723,14 @@ $$\begin{array}{c|c}
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
 
-
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>input = e eclipses and predominates the whole of her sex. it was not that he felt any emotion akin to love f
-output = o
+<pre>input = ck holmes she is always the woman. i have seldom heard him mention her under any other name. in his 
+output = e
 --------------
-input = er--excellent for drawing the veil from men&#39;s motives and actions. but for the trained reasoner to a
-output = d
+input = never spoke of the softer passions, save with a gibe and a sneer. they were admirable things for the
+output =  
 </pre>
 </div>
 </div>
@@ -15711,7 +15739,8 @@ output = d
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15720,7 +15749,8 @@ output = d
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15732,7 +15762,7 @@ output = d
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># print out the number of unique characters in the dataset</span>
@@ -15751,14 +15781,12 @@ output = d
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
 
-
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>this corpus has 54 unique characters
+<pre>this corpus has 39 unique characters
 and these characters are 
-[&#39; &#39;, &#39;!&#39;, &#39;&#34;&#39;, &#39;$&#39;, &#39;%&#39;, &#39;&amp;&#39;, &#34;&#39;&#34;, &#39;(&#39;, &#39;)&#39;, &#39;*&#39;, &#39;,&#39;, &#39;-&#39;, &#39;.&#39;, &#39;/&#39;, &#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;:&#39;, &#39;;&#39;, &#39;?&#39;, &#39;@&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;, &#39;j&#39;, &#39;k&#39;, &#39;l&#39;, &#39;m&#39;, &#39;n&#39;, &#39;o&#39;, &#39;p&#39;, &#39;q&#39;, &#39;r&#39;, &#39;s&#39;, &#39;t&#39;, &#39;u&#39;, &#39;v&#39;, &#39;w&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;]
+[&#39; &#39;, &#39;!&#39;, &#39;&#34;&#39;, &#39;&amp;&#39;, &#34;&#39;&#34;, &#39;(&#39;, &#39;)&#39;, &#39;,&#39;, &#39;-&#39;, &#39;.&#39;, &#39;:&#39;, &#39;;&#39;, &#39;?&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;, &#39;j&#39;, &#39;k&#39;, &#39;l&#39;, &#39;m&#39;, &#39;n&#39;, &#39;o&#39;, &#39;p&#39;, &#39;q&#39;, &#39;r&#39;, &#39;s&#39;, &#39;t&#39;, &#39;u&#39;, &#39;v&#39;, &#39;w&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;]
 </pre>
 </div>
 </div>
@@ -15767,7 +15795,8 @@ and these characters are
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15776,7 +15805,8 @@ and these characters are
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15808,7 +15838,8 @@ $$a\longleftarrow\left[\begin{array}{c}
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15819,7 +15850,7 @@ $$a\longleftarrow\left[\begin{array}{c}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># this dictionary is a function mapping each unique character to a unique integer</span>
@@ -15834,7 +15865,8 @@ $$a\longleftarrow\left[\begin{array}{c}
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15845,7 +15877,7 @@ $$a\longleftarrow\left[\begin{array}{c}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># transform character-based input/output into equivalent numerical versions</span>
@@ -15875,7 +15907,8 @@ $$a\longleftarrow\left[\begin{array}{c}
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15886,7 +15919,7 @@ $$a\longleftarrow\left[\begin{array}{c}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># use your function</span>
@@ -15900,7 +15933,8 @@ $$a\longleftarrow\left[\begin{array}{c}
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15920,7 +15954,7 @@ $$a\longleftarrow\left[\begin{array}{c}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### necessary functions from the keras library</span>
@@ -15933,7 +15967,7 @@ $$a\longleftarrow\left[\begin{array}{c}
 
 <span class="c1"># build the required RNN model: a single LSTM hidden layer with softmax activation, categorical_crossentropy loss </span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LSTM</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">window_size</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">chars</span><span class="p">))))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LSTM</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">window_size</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">chars</span><span class="p">))))</span>
 <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chars</span><span class="p">)))</span>
 <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
 
@@ -15948,26 +15982,9 @@ $$a\longleftarrow\left[\begin{array}{c}
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Using TensorFlow backend.
-</pre>
 </div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15978,7 +15995,7 @@ $$a\longleftarrow\left[\begin{array}{c}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># a small subset of our input/output pairs</span>
@@ -15991,7 +16008,8 @@ $$a\longleftarrow\left[\begin{array}{c}
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16002,7 +16020,7 @@ $$a\longleftarrow\left[\begin{array}{c}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># train the model</span>
@@ -16021,91 +16039,89 @@ $$a\longleftarrow\left[\begin{array}{c}
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Epoch 1/40
-10000/10000 [==============================] - 5s - loss: 3.1609     
+10000/10000 [==============================] - 76s - loss: 3.1232    
 Epoch 2/40
-10000/10000 [==============================] - 4s - loss: 2.9511     
+10000/10000 [==============================] - 4s - loss: 2.9581     
 Epoch 3/40
-10000/10000 [==============================] - 4s - loss: 2.9285     
+10000/10000 [==============================] - 4s - loss: 2.9377     
 Epoch 4/40
-10000/10000 [==============================] - 4s - loss: 2.9027     
+10000/10000 [==============================] - 4s - loss: 2.9153     
 Epoch 5/40
-10000/10000 [==============================] - 4s - loss: 2.8630     
+10000/10000 [==============================] - 4s - loss: 2.8741     
 Epoch 6/40
-10000/10000 [==============================] - 4s - loss: 2.8145     
+10000/10000 [==============================] - 4s - loss: 2.8171     
 Epoch 7/40
-10000/10000 [==============================] - 4s - loss: 2.7506     
+10000/10000 [==============================] - 4s - loss: 2.7476     
 Epoch 8/40
-10000/10000 [==============================] - 4s - loss: 2.6888     
+10000/10000 [==============================] - 4s - loss: 2.6716     
 Epoch 9/40
-10000/10000 [==============================] - 4s - loss: 2.6223     
+10000/10000 [==============================] - 4s - loss: 2.6158     
 Epoch 10/40
-10000/10000 [==============================] - 4s - loss: 2.5753     
+10000/10000 [==============================] - 4s - loss: 2.5567     
 Epoch 11/40
-10000/10000 [==============================] - 4s - loss: 2.5196     
+10000/10000 [==============================] - 4s - loss: 2.5091     
 Epoch 12/40
-10000/10000 [==============================] - 4s - loss: 2.4748     
+10000/10000 [==============================] - 4s - loss: 2.4669     
 Epoch 13/40
-10000/10000 [==============================] - 4s - loss: 2.4348     
+10000/10000 [==============================] - 4s - loss: 2.4281     
 Epoch 14/40
-10000/10000 [==============================] - 4s - loss: 2.4012     
+10000/10000 [==============================] - 4s - loss: 2.3946     
 Epoch 15/40
-10000/10000 [==============================] - 4s - loss: 2.3677     
+10000/10000 [==============================] - 4s - loss: 2.3608     
 Epoch 16/40
-10000/10000 [==============================] - 4s - loss: 2.3376     
+10000/10000 [==============================] - 4s - loss: 2.3331     
 Epoch 17/40
-10000/10000 [==============================] - 4s - loss: 2.3179     
+10000/10000 [==============================] - 4s - loss: 2.3047     
 Epoch 18/40
-10000/10000 [==============================] - 4s - loss: 2.2877     
+10000/10000 [==============================] - 4s - loss: 2.2815     
 Epoch 19/40
-10000/10000 [==============================] - 4s - loss: 2.2782     
+10000/10000 [==============================] - 4s - loss: 2.2609     
 Epoch 20/40
-10000/10000 [==============================] - 4s - loss: 2.2476     
+10000/10000 [==============================] - 4s - loss: 2.2345     
 Epoch 21/40
-10000/10000 [==============================] - 4s - loss: 2.2281     
+10000/10000 [==============================] - 4s - loss: 2.2198     
 Epoch 22/40
-10000/10000 [==============================] - 4s - loss: 2.2123     
+10000/10000 [==============================] - 4s - loss: 2.1996     
 Epoch 23/40
-10000/10000 [==============================] - 4s - loss: 2.1902     
+10000/10000 [==============================] - 4s - loss: 2.1793     
 Epoch 24/40
-10000/10000 [==============================] - 4s - loss: 2.1741     
+10000/10000 [==============================] - 4s - loss: 2.1609     
 Epoch 25/40
-10000/10000 [==============================] - 4s - loss: 2.1592     
+10000/10000 [==============================] - 4s - loss: 2.1385     
 Epoch 26/40
-10000/10000 [==============================] - 4s - loss: 2.1437     
+10000/10000 [==============================] - 4s - loss: 2.1230     
 Epoch 27/40
-10000/10000 [==============================] - 4s - loss: 2.1237     
+10000/10000 [==============================] - 4s - loss: 2.1032     
 Epoch 28/40
-10000/10000 [==============================] - 4s - loss: 2.1068     
+10000/10000 [==============================] - 4s - loss: 2.0829     
 Epoch 29/40
-10000/10000 [==============================] - 4s - loss: 2.0881     
+10000/10000 [==============================] - 4s - loss: 2.0638     
 Epoch 30/40
-10000/10000 [==============================] - 4s - loss: 2.0765     
+10000/10000 [==============================] - 4s - loss: 2.0467     
 Epoch 31/40
-10000/10000 [==============================] - 4s - loss: 2.0588     
+10000/10000 [==============================] - 4s - loss: 2.0290     
 Epoch 32/40
-10000/10000 [==============================] - 4s - loss: 2.0394     
+10000/10000 [==============================] - 4s - loss: 2.0060     
 Epoch 33/40
-10000/10000 [==============================] - 4s - loss: 2.0239     
+10000/10000 [==============================] - 4s - loss: 1.9884     
 Epoch 34/40
-10000/10000 [==============================] - 4s - loss: 2.0067     
+10000/10000 [==============================] - 4s - loss: 1.9732     
 Epoch 35/40
-10000/10000 [==============================] - 4s - loss: 1.9939     
+10000/10000 [==============================] - 4s - loss: 1.9479     
 Epoch 36/40
-10000/10000 [==============================] - 4s - loss: 1.9763     
+10000/10000 [==============================] - 4s - loss: 1.9333     
 Epoch 37/40
-10000/10000 [==============================] - 4s - loss: 1.9628     
+10000/10000 [==============================] - 4s - loss: 1.9055     
 Epoch 38/40
-10000/10000 [==============================] - 4s - loss: 1.9437     
+10000/10000 [==============================] - 4s - loss: 1.8896     
 Epoch 39/40
-10000/10000 [==============================] - 4s - loss: 1.9314     
+10000/10000 [==============================] - 4s - loss: 1.8694     
 Epoch 40/40
-10000/10000 [==============================] - 4s - loss: 1.9081     
+10000/10000 [==============================] - 4s - loss: 1.8448     
 </pre>
 </div>
 </div>
@@ -16114,7 +16130,8 @@ Epoch 40/40
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16127,7 +16144,7 @@ Epoch 40/40
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># function that uses trained model to predict a desired number of future characters</span>
@@ -16159,7 +16176,8 @@ Epoch 40/40
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16171,7 +16189,7 @@ Epoch 40/40
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># choose an input sequence and use the prediction function in the previous Python cell to predict 100 characters following it</span>
@@ -16206,17 +16224,15 @@ Epoch 40/40
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>------------------
 input chars = 
- at trincomalee, and finally of the mission which he had accomplished so delicately and successfully&#34;
+essa in the case of the trepoff murder, of his clearing up of the singular tragedy of the atkinson b&#34;
 
 predicted chars = 
- to the sour the sound the sout the sout the sout the sout the sound the sound he was the she sound &#34;
+e the sistor in the tored of the couthe in the the wish chich serter in the stored in the stored in &#34;
 
 </pre>
 </div>
@@ -16226,7 +16242,8 @@ predicted chars =
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16239,7 +16256,7 @@ predicted chars =
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### A simple way to write output to file</span>
@@ -16263,9 +16280,7 @@ predicted chars =
 
 
 <div class="output_area">
-
-<div class="prompt output_prompt">Out[20]:</div>
-
+<div class="prompt output_prompt">Out[59]:</div>
 
 
 
@@ -16279,7 +16294,8 @@ predicted chars =
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16288,7 +16304,8 @@ predicted chars =
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16300,7 +16317,7 @@ predicted chars =
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># a small subset of our input/output pairs</span>
@@ -16308,7 +16325,7 @@ predicted chars =
 <span class="n">ylarge</span> <span class="o">=</span> <span class="n">y</span><span class="p">[:</span><span class="mi">100000</span><span class="p">,:]</span>
 
 <span class="c1"># fit to our larger dataset</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xlarge</span><span class="p">,</span> <span class="n">ylarge</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span><span class="n">verbose</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xlarge</span><span class="p">,</span> <span class="n">ylarge</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span><span class="n">verbose</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># save weights</span>
 <span class="n">model</span><span class="o">.</span><span class="n">save_weights</span><span class="p">(</span><span class="s1">&#39;model_weights/best_RNN_large_textdata_weights.hdf5&#39;</span><span class="p">)</span>
@@ -16323,611 +16340,1407 @@ predicted chars =
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
 
-
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 1/300
-100000/100000 [==============================] - 46s - loss: 1.9957    
-Epoch 2/300
-100000/100000 [==============================] - 46s - loss: 1.9292    
-Epoch 3/300
-100000/100000 [==============================] - 46s - loss: 1.8735    
-Epoch 4/300
-100000/100000 [==============================] - 46s - loss: 1.8252    
-Epoch 5/300
-100000/100000 [==============================] - 46s - loss: 1.7809    
-Epoch 6/300
-100000/100000 [==============================] - 46s - loss: 1.7417    
-Epoch 7/300
-100000/100000 [==============================] - 46s - loss: 1.7040    
-Epoch 8/300
-100000/100000 [==============================] - 46s - loss: 1.6695    
-Epoch 9/300
-100000/100000 [==============================] - 46s - loss: 1.6360    
-Epoch 10/300
-100000/100000 [==============================] - 46s - loss: 1.6042    
-Epoch 11/300
-100000/100000 [==============================] - 46s - loss: 1.5736    
-Epoch 12/300
-100000/100000 [==============================] - 46s - loss: 1.5436    
-Epoch 13/300
-100000/100000 [==============================] - 46s - loss: 1.5150    
-Epoch 14/300
-100000/100000 [==============================] - 46s - loss: 1.4869    
-Epoch 15/300
-100000/100000 [==============================] - 46s - loss: 1.4587    
-Epoch 16/300
-100000/100000 [==============================] - 46s - loss: 1.4313    
-Epoch 17/300
-100000/100000 [==============================] - 46s - loss: 1.4114    
-Epoch 18/300
-100000/100000 [==============================] - 46s - loss: 1.3780    
-Epoch 19/300
-100000/100000 [==============================] - 46s - loss: 1.3508    
-Epoch 20/300
-100000/100000 [==============================] - 46s - loss: 1.3252    
-Epoch 21/300
-100000/100000 [==============================] - 46s - loss: 1.2978    
-Epoch 22/300
-100000/100000 [==============================] - 46s - loss: 1.2732    
-Epoch 23/300
-100000/100000 [==============================] - 46s - loss: 1.2447    
-Epoch 24/300
-100000/100000 [==============================] - 46s - loss: 1.2189    
-Epoch 25/300
-100000/100000 [==============================] - 46s - loss: 1.1917    
-Epoch 26/300
-100000/100000 [==============================] - 46s - loss: 1.1659    
-Epoch 27/300
-100000/100000 [==============================] - 46s - loss: 1.1398    
-Epoch 28/300
-100000/100000 [==============================] - 46s - loss: 1.1131    
-Epoch 29/300
-100000/100000 [==============================] - 46s - loss: 1.0885    
-Epoch 30/300
-100000/100000 [==============================] - 46s - loss: 1.0618    
-Epoch 31/300
-100000/100000 [==============================] - 46s - loss: 1.0368    
-Epoch 32/300
-100000/100000 [==============================] - 46s - loss: 1.0110    
-Epoch 33/300
-100000/100000 [==============================] - 46s - loss: 0.9871    
-Epoch 34/300
-100000/100000 [==============================] - 46s - loss: 0.9646    
-Epoch 35/300
-100000/100000 [==============================] - 46s - loss: 0.9410    
-Epoch 36/300
-100000/100000 [==============================] - 46s - loss: 0.9172    
-Epoch 37/300
-100000/100000 [==============================] - 46s - loss: 0.8974    
-Epoch 38/300
-100000/100000 [==============================] - 46s - loss: 0.8769    
-Epoch 39/300
-100000/100000 [==============================] - 46s - loss: 0.8576    
-Epoch 40/300
-100000/100000 [==============================] - 46s - loss: 0.8375    
-Epoch 41/300
-100000/100000 [==============================] - 46s - loss: 0.8165    
-Epoch 42/300
-100000/100000 [==============================] - 46s - loss: 0.7995    
-Epoch 43/300
-100000/100000 [==============================] - 46s - loss: 0.7833    
-Epoch 44/300
-100000/100000 [==============================] - 46s - loss: 0.7648    
-Epoch 45/300
-100000/100000 [==============================] - 46s - loss: 0.7478    
-Epoch 46/300
-100000/100000 [==============================] - 46s - loss: 0.7320    
-Epoch 47/300
-100000/100000 [==============================] - 46s - loss: 0.7188    
-Epoch 48/300
-100000/100000 [==============================] - 46s - loss: 0.7045    
-Epoch 49/300
-100000/100000 [==============================] - 46s - loss: 0.6905    
-Epoch 50/300
-100000/100000 [==============================] - 46s - loss: 0.6788    
-Epoch 51/300
-100000/100000 [==============================] - 46s - loss: 0.6631    
-Epoch 52/300
-100000/100000 [==============================] - 46s - loss: 0.6508    
-Epoch 53/300
-100000/100000 [==============================] - 46s - loss: 0.6381    
-Epoch 54/300
-100000/100000 [==============================] - 46s - loss: 0.6285    
-Epoch 55/300
-100000/100000 [==============================] - 46s - loss: 0.6167    
-Epoch 56/300
-100000/100000 [==============================] - 46s - loss: 0.6065    
-Epoch 57/300
-100000/100000 [==============================] - 46s - loss: 0.5977    
-Epoch 58/300
-100000/100000 [==============================] - 46s - loss: 0.5866    
-Epoch 59/300
-100000/100000 [==============================] - 46s - loss: 0.5771    
-Epoch 60/300
-100000/100000 [==============================] - 46s - loss: 0.5681    
-Epoch 61/300
-100000/100000 [==============================] - 46s - loss: 0.5566    
-Epoch 62/300
-100000/100000 [==============================] - 46s - loss: 0.5505    
-Epoch 63/300
-100000/100000 [==============================] - 46s - loss: 0.5420    
-Epoch 64/300
-100000/100000 [==============================] - 46s - loss: 0.5342    
-Epoch 65/300
-100000/100000 [==============================] - 46s - loss: 0.5256    
-Epoch 66/300
-100000/100000 [==============================] - 46s - loss: 0.5190    
-Epoch 67/300
-100000/100000 [==============================] - 46s - loss: 0.5092    
-Epoch 68/300
-100000/100000 [==============================] - 46s - loss: 0.5043    
-Epoch 69/300
-100000/100000 [==============================] - 46s - loss: 0.4971    
-Epoch 70/300
-100000/100000 [==============================] - 46s - loss: 0.4917    
-Epoch 71/300
-100000/100000 [==============================] - 46s - loss: 0.4829    
-Epoch 72/300
-100000/100000 [==============================] - 46s - loss: 0.4748    
-Epoch 73/300
-100000/100000 [==============================] - 46s - loss: 0.4725    
-Epoch 74/300
-100000/100000 [==============================] - 46s - loss: 0.4645    
-Epoch 75/300
-100000/100000 [==============================] - 46s - loss: 0.4597    
-Epoch 76/300
-100000/100000 [==============================] - 46s - loss: 0.4529    
-Epoch 77/300
-100000/100000 [==============================] - 46s - loss: 0.4464    
-Epoch 78/300
-100000/100000 [==============================] - 46s - loss: 0.4441    
-Epoch 79/300
-100000/100000 [==============================] - 46s - loss: 0.4374    
-Epoch 80/300
-100000/100000 [==============================] - 46s - loss: 0.4326    
-Epoch 81/300
-100000/100000 [==============================] - 46s - loss: 0.4247    
-Epoch 82/300
-100000/100000 [==============================] - 46s - loss: 0.4228    
-Epoch 83/300
-100000/100000 [==============================] - 46s - loss: 0.4171    
-Epoch 84/300
-100000/100000 [==============================] - 46s - loss: 0.4125    
-Epoch 85/300
-100000/100000 [==============================] - 46s - loss: 0.4094    
-Epoch 86/300
-100000/100000 [==============================] - 46s - loss: 0.4026    
-Epoch 87/300
-100000/100000 [==============================] - 46s - loss: 0.3985    
-Epoch 88/300
-100000/100000 [==============================] - 46s - loss: 0.3945    
-Epoch 89/300
-100000/100000 [==============================] - 46s - loss: 0.3903    
-Epoch 90/300
-100000/100000 [==============================] - 46s - loss: 0.3843    
-Epoch 91/300
-100000/100000 [==============================] - 46s - loss: 0.3799    
-Epoch 92/300
-100000/100000 [==============================] - 46s - loss: 0.3791    
-Epoch 93/300
-100000/100000 [==============================] - 46s - loss: 0.3744    
-Epoch 94/300
-100000/100000 [==============================] - 46s - loss: 0.3715    
-Epoch 95/300
-100000/100000 [==============================] - 46s - loss: 0.3651    
-Epoch 96/300
-100000/100000 [==============================] - 46s - loss: 0.3621    
-Epoch 97/300
-100000/100000 [==============================] - 46s - loss: 0.3636    
-Epoch 98/300
-100000/100000 [==============================] - 46s - loss: 0.3580    
-Epoch 99/300
-100000/100000 [==============================] - 46s - loss: 0.3532    
-Epoch 100/300
-100000/100000 [==============================] - 46s - loss: 0.3498    
-Epoch 101/300
-100000/100000 [==============================] - 46s - loss: 0.3436    
-Epoch 102/300
-100000/100000 [==============================] - 46s - loss: 0.3407    
-Epoch 103/300
-100000/100000 [==============================] - 46s - loss: 0.3375    
-Epoch 104/300
-100000/100000 [==============================] - 46s - loss: 0.3346    
-Epoch 105/300
-100000/100000 [==============================] - 46s - loss: 0.3309    
-Epoch 106/300
-100000/100000 [==============================] - 46s - loss: 0.3303    
-Epoch 107/300
-100000/100000 [==============================] - 46s - loss: 0.3262    
-Epoch 108/300
-100000/100000 [==============================] - 46s - loss: 0.3239    
-Epoch 109/300
-100000/100000 [==============================] - 46s - loss: 0.3207    
-Epoch 110/300
-100000/100000 [==============================] - 46s - loss: 0.3171    
-Epoch 111/300
-100000/100000 [==============================] - 46s - loss: 0.3142    
-Epoch 112/300
-100000/100000 [==============================] - 46s - loss: 0.3117    
-Epoch 113/300
-100000/100000 [==============================] - 46s - loss: 0.3059    
-Epoch 114/300
-100000/100000 [==============================] - 46s - loss: 0.3086    
-Epoch 115/300
-100000/100000 [==============================] - 46s - loss: 0.3070    
-Epoch 116/300
-100000/100000 [==============================] - 46s - loss: 0.3038    
-Epoch 117/300
-100000/100000 [==============================] - 46s - loss: 0.2981    
-Epoch 118/300
-100000/100000 [==============================] - 46s - loss: 0.2955    
-Epoch 119/300
-100000/100000 [==============================] - 46s - loss: 0.2919    
-Epoch 120/300
-100000/100000 [==============================] - 46s - loss: 0.2915    
-Epoch 121/300
-100000/100000 [==============================] - 46s - loss: 0.2893    
-Epoch 122/300
-100000/100000 [==============================] - 46s - loss: 0.2854    
-Epoch 123/300
-100000/100000 [==============================] - 46s - loss: 0.2837    
-Epoch 124/300
-100000/100000 [==============================] - 46s - loss: 0.2800    
-Epoch 125/300
-100000/100000 [==============================] - 46s - loss: 0.2772    
-Epoch 126/300
-100000/100000 [==============================] - 46s - loss: 0.2761    
-Epoch 127/300
-100000/100000 [==============================] - 46s - loss: 0.2769    
-Epoch 128/300
-100000/100000 [==============================] - 46s - loss: 0.2719    
-Epoch 129/300
-100000/100000 [==============================] - 46s - loss: 0.2692    
-Epoch 130/300
-100000/100000 [==============================] - 46s - loss: 0.2664    
-Epoch 131/300
-100000/100000 [==============================] - 46s - loss: 0.2681    
-Epoch 132/300
-100000/100000 [==============================] - 46s - loss: 0.2609    
-Epoch 133/300
-100000/100000 [==============================] - 46s - loss: 0.2644    
-Epoch 134/300
-100000/100000 [==============================] - 46s - loss: 0.2603    
-Epoch 135/300
-100000/100000 [==============================] - 46s - loss: 0.2551    
-Epoch 136/300
-100000/100000 [==============================] - 46s - loss: 0.2570    
-Epoch 137/300
-100000/100000 [==============================] - 46s - loss: 0.2499    
-Epoch 138/300
-100000/100000 [==============================] - 46s - loss: 0.2493    
-Epoch 139/300
-100000/100000 [==============================] - 46s - loss: 0.2514    
-Epoch 140/300
-100000/100000 [==============================] - 46s - loss: 0.2466    
-Epoch 141/300
-100000/100000 [==============================] - 46s - loss: 0.2410    
-Epoch 142/300
-100000/100000 [==============================] - 46s - loss: 0.2443    
-Epoch 143/300
-100000/100000 [==============================] - 46s - loss: 0.2428    
-Epoch 144/300
-100000/100000 [==============================] - 46s - loss: 0.2384    
-Epoch 145/300
-100000/100000 [==============================] - 46s - loss: 0.2367    
-Epoch 146/300
-100000/100000 [==============================] - 46s - loss: 0.2351    
-Epoch 147/300
-100000/100000 [==============================] - 46s - loss: 0.2363    
-Epoch 148/300
-100000/100000 [==============================] - 46s - loss: 0.2347    
-Epoch 149/300
-100000/100000 [==============================] - 46s - loss: 0.2326    
-Epoch 150/300
-100000/100000 [==============================] - 46s - loss: 0.2306    
-Epoch 151/300
-100000/100000 [==============================] - 46s - loss: 0.2275    
-Epoch 152/300
-100000/100000 [==============================] - 46s - loss: 0.2285    
-Epoch 153/300
-100000/100000 [==============================] - 46s - loss: 0.2265    
-Epoch 154/300
-100000/100000 [==============================] - 46s - loss: 0.2220    
-Epoch 155/300
-100000/100000 [==============================] - 46s - loss: 0.2214    
-Epoch 156/300
-100000/100000 [==============================] - 46s - loss: 0.2196    
-Epoch 157/300
-100000/100000 [==============================] - 46s - loss: 0.2186    
-Epoch 158/300
-100000/100000 [==============================] - 46s - loss: 0.2177    
-Epoch 159/300
-100000/100000 [==============================] - 46s - loss: 0.2167    
-Epoch 160/300
-100000/100000 [==============================] - 46s - loss: 0.2171    
-Epoch 161/300
-100000/100000 [==============================] - 46s - loss: 0.2129    
-Epoch 162/300
-100000/100000 [==============================] - 46s - loss: 0.2158    
-Epoch 163/300
-100000/100000 [==============================] - 46s - loss: 0.2079    
-Epoch 164/300
-100000/100000 [==============================] - 46s - loss: 0.2084    
-Epoch 165/300
-100000/100000 [==============================] - 46s - loss: 0.2071    
-Epoch 166/300
-100000/100000 [==============================] - 46s - loss: 0.2112    
-Epoch 167/300
-100000/100000 [==============================] - 46s - loss: 0.2081    
-Epoch 168/300
-100000/100000 [==============================] - 46s - loss: 0.2045    
-Epoch 169/300
-100000/100000 [==============================] - 46s - loss: 0.2023    
-Epoch 170/300
-100000/100000 [==============================] - 46s - loss: 0.2014    
-Epoch 171/300
-100000/100000 [==============================] - 46s - loss: 0.2011    
-Epoch 172/300
-100000/100000 [==============================] - 46s - loss: 0.2011    
-Epoch 173/300
-100000/100000 [==============================] - 46s - loss: 0.1995    
-Epoch 174/300
-100000/100000 [==============================] - 46s - loss: 0.2000    
-Epoch 175/300
-100000/100000 [==============================] - 46s - loss: 0.1947    
-Epoch 176/300
-100000/100000 [==============================] - 46s - loss: 0.1955    
-Epoch 177/300
-100000/100000 [==============================] - 46s - loss: 0.1949    
-Epoch 178/300
-100000/100000 [==============================] - 46s - loss: 0.1945    
-Epoch 179/300
-100000/100000 [==============================] - 46s - loss: 0.1931    
-Epoch 180/300
-100000/100000 [==============================] - 46s - loss: 0.1922    
-Epoch 181/300
-100000/100000 [==============================] - 46s - loss: 0.1911    
-Epoch 182/300
-100000/100000 [==============================] - 46s - loss: 0.1891    
-Epoch 183/300
-100000/100000 [==============================] - 46s - loss: 0.1893    
-Epoch 184/300
-100000/100000 [==============================] - 46s - loss: 0.1860    
-Epoch 185/300
-100000/100000 [==============================] - 46s - loss: 0.1855    
-Epoch 186/300
-100000/100000 [==============================] - 46s - loss: 0.1869    
-Epoch 187/300
-100000/100000 [==============================] - 46s - loss: 0.1825    
-Epoch 188/300
-100000/100000 [==============================] - 46s - loss: 0.1850    
-Epoch 189/300
-100000/100000 [==============================] - 46s - loss: 0.1870    
-Epoch 190/300
-100000/100000 [==============================] - 46s - loss: 0.1814    
-Epoch 191/300
-100000/100000 [==============================] - 46s - loss: 0.1804    
-Epoch 192/300
-100000/100000 [==============================] - 46s - loss: 0.1785    
-Epoch 193/300
-100000/100000 [==============================] - 46s - loss: 0.1756    
-Epoch 194/300
-100000/100000 [==============================] - 46s - loss: 0.1759    
-Epoch 195/300
-100000/100000 [==============================] - 46s - loss: 0.1777    
-Epoch 196/300
-100000/100000 [==============================] - 46s - loss: 0.1774    
-Epoch 197/300
-100000/100000 [==============================] - 46s - loss: 0.1753    
-Epoch 198/300
-100000/100000 [==============================] - 46s - loss: 0.1758    
-Epoch 199/300
-100000/100000 [==============================] - 46s - loss: 0.1731    
-Epoch 200/300
-100000/100000 [==============================] - 46s - loss: 0.1740    
-Epoch 201/300
-100000/100000 [==============================] - 46s - loss: 0.1709    
-Epoch 202/300
-100000/100000 [==============================] - 46s - loss: 0.1685    
-Epoch 203/300
-100000/100000 [==============================] - 46s - loss: 0.1694    
-Epoch 204/300
-100000/100000 [==============================] - 46s - loss: 0.1682    
-Epoch 205/300
-100000/100000 [==============================] - 46s - loss: 0.1688    
-Epoch 206/300
-100000/100000 [==============================] - 46s - loss: 0.1671    
-Epoch 207/300
-100000/100000 [==============================] - 46s - loss: 0.1663    
-Epoch 208/300
-100000/100000 [==============================] - 46s - loss: 0.1654    
-Epoch 209/300
-100000/100000 [==============================] - 46s - loss: 0.1660    
-Epoch 210/300
-100000/100000 [==============================] - 46s - loss: 0.1641    
-Epoch 211/300
-100000/100000 [==============================] - 46s - loss: 0.1631    
-Epoch 212/300
-100000/100000 [==============================] - 46s - loss: 0.1640    
-Epoch 213/300
-100000/100000 [==============================] - 46s - loss: 0.1594    
-Epoch 214/300
-100000/100000 [==============================] - 46s - loss: 0.1587    
-Epoch 215/300
-100000/100000 [==============================] - 46s - loss: 0.1590    
-Epoch 216/300
-100000/100000 [==============================] - 46s - loss: 0.1592    
-Epoch 217/300
-100000/100000 [==============================] - 46s - loss: 0.1586    
-Epoch 218/300
-100000/100000 [==============================] - 46s - loss: 0.1604    
-Epoch 219/300
-100000/100000 [==============================] - 46s - loss: 0.1566    
-Epoch 220/300
-100000/100000 [==============================] - 46s - loss: 0.1579    
-Epoch 221/300
-100000/100000 [==============================] - 46s - loss: 0.1562    
-Epoch 222/300
-100000/100000 [==============================] - 46s - loss: 0.1557    
-Epoch 223/300
-100000/100000 [==============================] - 46s - loss: 0.1539    
-Epoch 224/300
-100000/100000 [==============================] - 46s - loss: 0.1554    
-Epoch 225/300
-100000/100000 [==============================] - 46s - loss: 0.1528    
-Epoch 226/300
-100000/100000 [==============================] - 46s - loss: 0.1535    
-Epoch 227/300
-100000/100000 [==============================] - 46s - loss: 0.1559    
-Epoch 228/300
-100000/100000 [==============================] - 46s - loss: 0.1534    
-Epoch 229/300
-100000/100000 [==============================] - 46s - loss: 0.1523    
-Epoch 230/300
-100000/100000 [==============================] - 46s - loss: 0.1493    
-Epoch 231/300
-100000/100000 [==============================] - 46s - loss: 0.1496    
-Epoch 232/300
-100000/100000 [==============================] - 46s - loss: 0.1499    
-Epoch 233/300
-100000/100000 [==============================] - 46s - loss: 0.1491    
-Epoch 234/300
-100000/100000 [==============================] - 46s - loss: 0.1472    
-Epoch 235/300
-100000/100000 [==============================] - 46s - loss: 0.1448    
-Epoch 236/300
-100000/100000 [==============================] - 46s - loss: 0.1472    
-Epoch 237/300
-100000/100000 [==============================] - 46s - loss: 0.1442    
-Epoch 238/300
-100000/100000 [==============================] - 46s - loss: 0.1453    
-Epoch 239/300
-100000/100000 [==============================] - 46s - loss: 0.1452    
-Epoch 240/300
-100000/100000 [==============================] - 46s - loss: 0.1450    
-Epoch 241/300
-100000/100000 [==============================] - 46s - loss: 0.1429    
-Epoch 242/300
-100000/100000 [==============================] - 46s - loss: 0.1443    
-Epoch 243/300
-100000/100000 [==============================] - 46s - loss: 0.1378    
-Epoch 244/300
-100000/100000 [==============================] - 46s - loss: 0.1437    
-Epoch 245/300
-100000/100000 [==============================] - 46s - loss: 0.1415    
-Epoch 246/300
-100000/100000 [==============================] - 46s - loss: 0.1398    
-Epoch 247/300
-100000/100000 [==============================] - 46s - loss: 0.1401    
-Epoch 248/300
-100000/100000 [==============================] - 46s - loss: 0.1401    
-Epoch 249/300
-100000/100000 [==============================] - 46s - loss: 0.1413    
-Epoch 250/300
-100000/100000 [==============================] - 46s - loss: 0.1404    
-Epoch 251/300
-100000/100000 [==============================] - 46s - loss: 0.1370    
-Epoch 252/300
-100000/100000 [==============================] - 46s - loss: 0.1398    
-Epoch 253/300
-100000/100000 [==============================] - 46s - loss: 0.1387    
-Epoch 254/300
-100000/100000 [==============================] - 46s - loss: 0.1373    
-Epoch 255/300
-100000/100000 [==============================] - 46s - loss: 0.1390    
-Epoch 256/300
-100000/100000 [==============================] - 46s - loss: 0.1367    
-Epoch 257/300
-100000/100000 [==============================] - 46s - loss: 0.1359    
-Epoch 258/300
-100000/100000 [==============================] - 46s - loss: 0.1361    
-Epoch 259/300
-100000/100000 [==============================] - 46s - loss: 0.1323    
-Epoch 260/300
-100000/100000 [==============================] - 46s - loss: 0.1312    
-Epoch 261/300
-100000/100000 [==============================] - 46s - loss: 0.1347    
-Epoch 262/300
-100000/100000 [==============================] - 46s - loss: 0.1335    
-Epoch 263/300
-100000/100000 [==============================] - 46s - loss: 0.1339    
-Epoch 264/300
-100000/100000 [==============================] - 46s - loss: 0.1335    
-Epoch 265/300
-100000/100000 [==============================] - 46s - loss: 0.1323    
-Epoch 266/300
-100000/100000 [==============================] - 46s - loss: 0.1327    
-Epoch 267/300
-100000/100000 [==============================] - 46s - loss: 0.1296    
-Epoch 268/300
-100000/100000 [==============================] - 46s - loss: 0.1292    
-Epoch 269/300
-100000/100000 [==============================] - 46s - loss: 0.1289    
-Epoch 270/300
-100000/100000 [==============================] - 46s - loss: 0.1283    
-Epoch 271/300
-100000/100000 [==============================] - 46s - loss: 0.1313    
-Epoch 272/300
-100000/100000 [==============================] - 46s - loss: 0.1301    
-Epoch 273/300
-100000/100000 [==============================] - 46s - loss: 0.1287    
-Epoch 274/300
-100000/100000 [==============================] - 46s - loss: 0.1260    
-Epoch 275/300
-100000/100000 [==============================] - 46s - loss: 0.1298    
-Epoch 276/300
-100000/100000 [==============================] - 46s - loss: 0.1280    
-Epoch 277/300
-100000/100000 [==============================] - 46s - loss: 0.1291    
-Epoch 278/300
-100000/100000 [==============================] - 46s - loss: 0.1258    
-Epoch 279/300
-100000/100000 [==============================] - 46s - loss: 0.1244    
-Epoch 280/300
-100000/100000 [==============================] - 46s - loss: 0.1254    
-Epoch 281/300
-100000/100000 [==============================] - 46s - loss: 0.1256    
-Epoch 282/300
-100000/100000 [==============================] - 46s - loss: 0.1263    
-Epoch 283/300
-100000/100000 [==============================] - 46s - loss: 0.1219    
-Epoch 284/300
-100000/100000 [==============================] - 46s - loss: 0.1259    
-Epoch 285/300
-100000/100000 [==============================] - 46s - loss: 0.1262    
-Epoch 286/300
-100000/100000 [==============================] - 46s - loss: 0.1234    
-Epoch 287/300
-100000/100000 [==============================] - 46s - loss: 0.1240    
-Epoch 288/300
-100000/100000 [==============================] - 46s - loss: 0.1212    
-Epoch 289/300
-100000/100000 [==============================] - 46s - loss: 0.1232    
-Epoch 290/300
-100000/100000 [==============================] - 46s - loss: 0.1228    
-Epoch 291/300
-100000/100000 [==============================] - 46s - loss: 0.1198    
-Epoch 292/300
-100000/100000 [==============================] - 46s - loss: 0.1195    
-Epoch 293/300
-100000/100000 [==============================] - 46s - loss: 0.1225    
-Epoch 294/300
-100000/100000 [==============================] - 46s - loss: 0.1199    
-Epoch 295/300
-100000/100000 [==============================] - 46s - loss: 0.1229    
-Epoch 296/300
-100000/100000 [==============================] - 46s - loss: 0.1184    
-Epoch 297/300
-100000/100000 [==============================] - 46s - loss: 0.1226    
-Epoch 298/300
-100000/100000 [==============================] - 46s - loss: 0.1210    
-Epoch 299/300
-100000/100000 [==============================] - 46s - loss: 0.1188    
-Epoch 300/300
-100000/100000 [==============================] - 46s - loss: 0.1192    
+<pre>Epoch 1/700
+100000/100000 [==============================] - 43s - loss: 2.7872    
+Epoch 2/700
+100000/100000 [==============================] - 43s - loss: 2.3589    
+Epoch 3/700
+100000/100000 [==============================] - 43s - loss: 2.1887    
+Epoch 4/700
+100000/100000 [==============================] - 43s - loss: 2.0767    
+Epoch 5/700
+100000/100000 [==============================] - 43s - loss: 1.9917    
+Epoch 6/700
+100000/100000 [==============================] - 43s - loss: 1.9238    
+Epoch 7/700
+100000/100000 [==============================] - 43s - loss: 1.8669    
+Epoch 8/700
+100000/100000 [==============================] - 43s - loss: 1.8180    
+Epoch 9/700
+100000/100000 [==============================] - 43s - loss: 1.7749    
+Epoch 10/700
+100000/100000 [==============================] - 43s - loss: 1.7354    
+Epoch 11/700
+100000/100000 [==============================] - 43s - loss: 1.6990    
+Epoch 12/700
+100000/100000 [==============================] - 43s - loss: 1.6640    
+Epoch 13/700
+100000/100000 [==============================] - 43s - loss: 1.6309    
+Epoch 14/700
+100000/100000 [==============================] - 43s - loss: 1.5993    
+Epoch 15/700
+100000/100000 [==============================] - 43s - loss: 1.5695    
+Epoch 16/700
+100000/100000 [==============================] - 43s - loss: 1.5403    
+Epoch 17/700
+100000/100000 [==============================] - 43s - loss: 1.5115    
+Epoch 18/700
+100000/100000 [==============================] - 43s - loss: 1.4839    
+Epoch 19/700
+100000/100000 [==============================] - 43s - loss: 1.4569    
+Epoch 20/700
+100000/100000 [==============================] - 43s - loss: 1.4301    
+Epoch 21/700
+100000/100000 [==============================] - 43s - loss: 1.4036    
+Epoch 22/700
+100000/100000 [==============================] - 43s - loss: 1.3768    
+Epoch 23/700
+100000/100000 [==============================] - 43s - loss: 1.3515    
+Epoch 24/700
+100000/100000 [==============================] - 43s - loss: 1.3249    
+Epoch 25/700
+100000/100000 [==============================] - 43s - loss: 1.2996    
+Epoch 26/700
+100000/100000 [==============================] - 43s - loss: 1.2732    
+Epoch 27/700
+100000/100000 [==============================] - 43s - loss: 1.2469    
+Epoch 28/700
+100000/100000 [==============================] - 43s - loss: 1.2217    
+Epoch 29/700
+100000/100000 [==============================] - 43s - loss: 1.1953    
+Epoch 30/700
+100000/100000 [==============================] - 43s - loss: 1.1691    
+Epoch 31/700
+100000/100000 [==============================] - 43s - loss: 1.1445    
+Epoch 32/700
+100000/100000 [==============================] - 43s - loss: 1.1192    
+Epoch 33/700
+100000/100000 [==============================] - 43s - loss: 1.0935    
+Epoch 34/700
+100000/100000 [==============================] - 43s - loss: 1.0687    
+Epoch 35/700
+100000/100000 [==============================] - 43s - loss: 1.0451    
+Epoch 36/700
+100000/100000 [==============================] - 43s - loss: 1.0203    
+Epoch 37/700
+100000/100000 [==============================] - 43s - loss: 0.9979    
+Epoch 38/700
+100000/100000 [==============================] - 43s - loss: 0.9746    
+Epoch 39/700
+100000/100000 [==============================] - 43s - loss: 0.9525    
+Epoch 40/700
+100000/100000 [==============================] - 43s - loss: 0.9317    
+Epoch 41/700
+100000/100000 [==============================] - 43s - loss: 0.9103    
+Epoch 42/700
+100000/100000 [==============================] - 43s - loss: 0.8898    
+Epoch 43/700
+100000/100000 [==============================] - 43s - loss: 0.8712    
+Epoch 44/700
+100000/100000 [==============================] - 43s - loss: 0.8517    
+Epoch 45/700
+100000/100000 [==============================] - 43s - loss: 0.8343    
+Epoch 46/700
+100000/100000 [==============================] - 43s - loss: 0.8154    
+Epoch 47/700
+100000/100000 [==============================] - 43s - loss: 0.7996    
+Epoch 48/700
+100000/100000 [==============================] - 43s - loss: 0.7851    
+Epoch 49/700
+100000/100000 [==============================] - 43s - loss: 0.7694    
+Epoch 50/700
+100000/100000 [==============================] - 43s - loss: 0.7539    
+Epoch 51/700
+100000/100000 [==============================] - 43s - loss: 0.7389    
+Epoch 52/700
+100000/100000 [==============================] - 43s - loss: 0.7270    
+Epoch 53/700
+100000/100000 [==============================] - 43s - loss: 0.7130    
+Epoch 54/700
+100000/100000 [==============================] - 43s - loss: 0.7001    
+Epoch 55/700
+100000/100000 [==============================] - 43s - loss: 0.6890    
+Epoch 56/700
+100000/100000 [==============================] - 43s - loss: 0.6774    
+Epoch 57/700
+100000/100000 [==============================] - 43s - loss: 0.6656    
+Epoch 58/700
+100000/100000 [==============================] - 43s - loss: 0.6564    
+Epoch 59/700
+100000/100000 [==============================] - 43s - loss: 0.6448    
+Epoch 60/700
+100000/100000 [==============================] - 43s - loss: 0.6363    
+Epoch 61/700
+100000/100000 [==============================] - 43s - loss: 0.6256    
+Epoch 62/700
+100000/100000 [==============================] - 43s - loss: 0.6155    
+Epoch 63/700
+100000/100000 [==============================] - 43s - loss: 0.6070    
+Epoch 64/700
+100000/100000 [==============================] - 43s - loss: 0.5990    
+Epoch 65/700
+100000/100000 [==============================] - 43s - loss: 0.5908    
+Epoch 66/700
+100000/100000 [==============================] - 43s - loss: 0.5825    
+Epoch 67/700
+100000/100000 [==============================] - 43s - loss: 0.5747    
+Epoch 68/700
+100000/100000 [==============================] - 43s - loss: 0.5670    
+Epoch 69/700
+100000/100000 [==============================] - 43s - loss: 0.5596    
+Epoch 70/700
+100000/100000 [==============================] - 43s - loss: 0.5537    
+Epoch 71/700
+100000/100000 [==============================] - 43s - loss: 0.5449    
+Epoch 72/700
+100000/100000 [==============================] - 43s - loss: 0.5395    
+Epoch 73/700
+100000/100000 [==============================] - 43s - loss: 0.5336    
+Epoch 74/700
+100000/100000 [==============================] - 43s - loss: 0.5265    
+Epoch 75/700
+100000/100000 [==============================] - 43s - loss: 0.5202    
+Epoch 76/700
+100000/100000 [==============================] - 43s - loss: 0.5140    
+Epoch 77/700
+100000/100000 [==============================] - 43s - loss: 0.5080    
+Epoch 78/700
+100000/100000 [==============================] - 43s - loss: 0.5042    
+Epoch 79/700
+100000/100000 [==============================] - 43s - loss: 0.4958    
+Epoch 80/700
+100000/100000 [==============================] - 43s - loss: 0.4912    
+Epoch 81/700
+100000/100000 [==============================] - 43s - loss: 0.4838    
+Epoch 82/700
+100000/100000 [==============================] - 43s - loss: 0.4813    
+Epoch 83/700
+100000/100000 [==============================] - 43s - loss: 0.4772    
+Epoch 84/700
+100000/100000 [==============================] - 43s - loss: 0.4721    
+Epoch 85/700
+100000/100000 [==============================] - 43s - loss: 0.4683    
+Epoch 86/700
+100000/100000 [==============================] - 43s - loss: 0.4631    
+Epoch 87/700
+100000/100000 [==============================] - 43s - loss: 0.4561    
+Epoch 88/700
+100000/100000 [==============================] - 43s - loss: 0.4530    
+Epoch 89/700
+100000/100000 [==============================] - 43s - loss: 0.4483    
+Epoch 90/700
+100000/100000 [==============================] - 43s - loss: 0.4427    
+Epoch 91/700
+100000/100000 [==============================] - 43s - loss: 0.4384    
+Epoch 92/700
+100000/100000 [==============================] - 43s - loss: 0.4364    
+Epoch 93/700
+100000/100000 [==============================] - 43s - loss: 0.4312    
+Epoch 94/700
+100000/100000 [==============================] - 43s - loss: 0.4267    
+Epoch 95/700
+100000/100000 [==============================] - 43s - loss: 0.4226    
+Epoch 96/700
+100000/100000 [==============================] - 43s - loss: 0.4178    
+Epoch 97/700
+100000/100000 [==============================] - 43s - loss: 0.4155    
+Epoch 98/700
+100000/100000 [==============================] - 43s - loss: 0.4106    
+Epoch 99/700
+100000/100000 [==============================] - 43s - loss: 0.4070    
+Epoch 100/700
+100000/100000 [==============================] - 43s - loss: 0.4026    
+Epoch 101/700
+100000/100000 [==============================] - 43s - loss: 0.3998    
+Epoch 102/700
+100000/100000 [==============================] - 43s - loss: 0.3984    
+Epoch 103/700
+100000/100000 [==============================] - 43s - loss: 0.3922    
+Epoch 104/700
+100000/100000 [==============================] - 43s - loss: 0.3904    
+Epoch 105/700
+100000/100000 [==============================] - 43s - loss: 0.3907    
+Epoch 106/700
+100000/100000 [==============================] - 43s - loss: 0.3827    
+Epoch 107/700
+100000/100000 [==============================] - 43s - loss: 0.3807    
+Epoch 108/700
+100000/100000 [==============================] - 43s - loss: 0.3769    
+Epoch 109/700
+100000/100000 [==============================] - 43s - loss: 0.3766    
+Epoch 110/700
+100000/100000 [==============================] - 43s - loss: 0.3726    
+Epoch 111/700
+100000/100000 [==============================] - 43s - loss: 0.3705    
+Epoch 112/700
+100000/100000 [==============================] - 43s - loss: 0.3696    
+Epoch 113/700
+100000/100000 [==============================] - 43s - loss: 0.3637    
+Epoch 114/700
+100000/100000 [==============================] - 43s - loss: 0.3612    
+Epoch 115/700
+100000/100000 [==============================] - 43s - loss: 0.3570    
+Epoch 116/700
+100000/100000 [==============================] - 43s - loss: 0.3559    
+Epoch 117/700
+100000/100000 [==============================] - 43s - loss: 0.3524    
+Epoch 118/700
+100000/100000 [==============================] - 43s - loss: 0.3534    
+Epoch 119/700
+100000/100000 [==============================] - 43s - loss: 0.3475    
+Epoch 120/700
+100000/100000 [==============================] - 43s - loss: 0.3435    
+Epoch 121/700
+100000/100000 [==============================] - 43s - loss: 0.3430    
+Epoch 122/700
+100000/100000 [==============================] - 43s - loss: 0.3395    
+Epoch 123/700
+100000/100000 [==============================] - 43s - loss: 0.3367    
+Epoch 124/700
+100000/100000 [==============================] - 43s - loss: 0.3335    
+Epoch 125/700
+100000/100000 [==============================] - 43s - loss: 0.3306    
+Epoch 126/700
+100000/100000 [==============================] - 43s - loss: 0.3298    
+Epoch 127/700
+100000/100000 [==============================] - 43s - loss: 0.3250    
+Epoch 128/700
+100000/100000 [==============================] - 43s - loss: 0.3256    
+Epoch 129/700
+100000/100000 [==============================] - 43s - loss: 0.3230    
+Epoch 130/700
+100000/100000 [==============================] - 43s - loss: 0.3196    
+Epoch 131/700
+100000/100000 [==============================] - 43s - loss: 0.3169    
+Epoch 132/700
+100000/100000 [==============================] - 43s - loss: 0.3147    
+Epoch 133/700
+100000/100000 [==============================] - 43s - loss: 0.3138    
+Epoch 134/700
+100000/100000 [==============================] - 43s - loss: 0.3078    
+Epoch 135/700
+100000/100000 [==============================] - 43s - loss: 0.3074    
+Epoch 136/700
+100000/100000 [==============================] - 43s - loss: 0.3081    
+Epoch 137/700
+100000/100000 [==============================] - 43s - loss: 0.3038    
+Epoch 138/700
+100000/100000 [==============================] - 43s - loss: 0.3022    
+Epoch 139/700
+100000/100000 [==============================] - 43s - loss: 0.2994    
+Epoch 140/700
+100000/100000 [==============================] - 43s - loss: 0.2987    
+Epoch 141/700
+100000/100000 [==============================] - 43s - loss: 0.2972    
+Epoch 142/700
+100000/100000 [==============================] - 43s - loss: 0.2937    
+Epoch 143/700
+100000/100000 [==============================] - 43s - loss: 0.2921    
+Epoch 144/700
+100000/100000 [==============================] - 43s - loss: 0.2926    
+Epoch 145/700
+100000/100000 [==============================] - 43s - loss: 0.2888    
+Epoch 146/700
+100000/100000 [==============================] - 43s - loss: 0.2881    
+Epoch 147/700
+100000/100000 [==============================] - 43s - loss: 0.2833    
+Epoch 148/700
+100000/100000 [==============================] - 43s - loss: 0.2822    
+Epoch 149/700
+100000/100000 [==============================] - 43s - loss: 0.2803    
+Epoch 150/700
+100000/100000 [==============================] - 43s - loss: 0.2777    
+Epoch 151/700
+100000/100000 [==============================] - 43s - loss: 0.2783    
+Epoch 152/700
+100000/100000 [==============================] - 43s - loss: 0.2760    
+Epoch 153/700
+100000/100000 [==============================] - 43s - loss: 0.2722    
+Epoch 154/700
+100000/100000 [==============================] - 43s - loss: 0.2736    
+Epoch 155/700
+100000/100000 [==============================] - 43s - loss: 0.2704    
+Epoch 156/700
+100000/100000 [==============================] - 43s - loss: 0.2705    
+Epoch 157/700
+100000/100000 [==============================] - 43s - loss: 0.2681    
+Epoch 158/700
+100000/100000 [==============================] - 43s - loss: 0.2659    
+Epoch 159/700
+100000/100000 [==============================] - 43s - loss: 0.2635    
+Epoch 160/700
+100000/100000 [==============================] - 43s - loss: 0.2625    
+Epoch 161/700
+100000/100000 [==============================] - 43s - loss: 0.2615    
+Epoch 162/700
+100000/100000 [==============================] - 43s - loss: 0.2621    
+Epoch 163/700
+100000/100000 [==============================] - 43s - loss: 0.2592    
+Epoch 164/700
+100000/100000 [==============================] - 43s - loss: 0.2552    
+Epoch 165/700
+100000/100000 [==============================] - 43s - loss: 0.2548    
+Epoch 166/700
+100000/100000 [==============================] - 43s - loss: 0.2529    
+Epoch 167/700
+100000/100000 [==============================] - 43s - loss: 0.2530    
+Epoch 168/700
+100000/100000 [==============================] - 43s - loss: 0.2488    
+Epoch 169/700
+100000/100000 [==============================] - 43s - loss: 0.2485    
+Epoch 170/700
+100000/100000 [==============================] - 43s - loss: 0.2485    
+Epoch 171/700
+100000/100000 [==============================] - 43s - loss: 0.2484    
+Epoch 172/700
+100000/100000 [==============================] - 43s - loss: 0.2466    
+Epoch 173/700
+100000/100000 [==============================] - 43s - loss: 0.2444    
+Epoch 174/700
+100000/100000 [==============================] - 43s - loss: 0.2446    
+Epoch 175/700
+100000/100000 [==============================] - 43s - loss: 0.2406    
+Epoch 176/700
+100000/100000 [==============================] - 43s - loss: 0.2386    
+Epoch 177/700
+100000/100000 [==============================] - 43s - loss: 0.2380    
+Epoch 178/700
+100000/100000 [==============================] - 43s - loss: 0.2380    
+Epoch 179/700
+100000/100000 [==============================] - 43s - loss: 0.2354    
+Epoch 180/700
+100000/100000 [==============================] - 43s - loss: 0.2358    
+Epoch 181/700
+100000/100000 [==============================] - 43s - loss: 0.2356    
+Epoch 182/700
+100000/100000 [==============================] - 43s - loss: 0.2345    
+Epoch 183/700
+100000/100000 [==============================] - 43s - loss: 0.2293    
+Epoch 184/700
+100000/100000 [==============================] - 43s - loss: 0.2298    
+Epoch 185/700
+100000/100000 [==============================] - 43s - loss: 0.2310    
+Epoch 186/700
+100000/100000 [==============================] - 43s - loss: 0.2292    
+Epoch 187/700
+100000/100000 [==============================] - 43s - loss: 0.2281    
+Epoch 188/700
+100000/100000 [==============================] - 43s - loss: 0.2250    
+Epoch 189/700
+100000/100000 [==============================] - 43s - loss: 0.2240    
+Epoch 190/700
+100000/100000 [==============================] - 43s - loss: 0.2243    
+Epoch 191/700
+100000/100000 [==============================] - 43s - loss: 0.2213    
+Epoch 192/700
+100000/100000 [==============================] - 43s - loss: 0.2229    
+Epoch 193/700
+100000/100000 [==============================] - 43s - loss: 0.2177    
+Epoch 194/700
+100000/100000 [==============================] - 43s - loss: 0.2180    
+Epoch 195/700
+100000/100000 [==============================] - 43s - loss: 0.2181    
+Epoch 196/700
+100000/100000 [==============================] - 43s - loss: 0.2144    
+Epoch 197/700
+100000/100000 [==============================] - 43s - loss: 0.2144    
+Epoch 198/700
+100000/100000 [==============================] - 43s - loss: 0.2141    
+Epoch 199/700
+100000/100000 [==============================] - 43s - loss: 0.2136    
+Epoch 200/700
+100000/100000 [==============================] - 43s - loss: 0.2155    
+Epoch 201/700
+100000/100000 [==============================] - 43s - loss: 0.2113    
+Epoch 202/700
+100000/100000 [==============================] - 43s - loss: 0.2108    
+Epoch 203/700
+100000/100000 [==============================] - 43s - loss: 0.2090    
+Epoch 204/700
+100000/100000 [==============================] - 43s - loss: 0.2121    
+Epoch 205/700
+100000/100000 [==============================] - 43s - loss: 0.2096    
+Epoch 206/700
+100000/100000 [==============================] - 43s - loss: 0.2092    
+Epoch 207/700
+100000/100000 [==============================] - 43s - loss: 0.2078    
+Epoch 208/700
+100000/100000 [==============================] - 43s - loss: 0.2047    
+Epoch 209/700
+100000/100000 [==============================] - 43s - loss: 0.2056    
+Epoch 210/700
+100000/100000 [==============================] - 43s - loss: 0.2016    
+Epoch 211/700
+100000/100000 [==============================] - 43s - loss: 0.2035    
+Epoch 212/700
+100000/100000 [==============================] - 43s - loss: 0.2030    
+Epoch 213/700
+100000/100000 [==============================] - 43s - loss: 0.1989    
+Epoch 214/700
+100000/100000 [==============================] - 43s - loss: 0.1983    
+Epoch 215/700
+100000/100000 [==============================] - 43s - loss: 0.1988    
+Epoch 216/700
+100000/100000 [==============================] - 43s - loss: 0.1961    
+Epoch 217/700
+100000/100000 [==============================] - 43s - loss: 0.1964    
+Epoch 218/700
+100000/100000 [==============================] - 43s - loss: 0.1934    
+Epoch 219/700
+100000/100000 [==============================] - 43s - loss: 0.1970    
+Epoch 220/700
+100000/100000 [==============================] - 43s - loss: 0.1958    
+Epoch 221/700
+100000/100000 [==============================] - 43s - loss: 0.1949    
+Epoch 222/700
+100000/100000 [==============================] - 43s - loss: 0.1899    
+Epoch 223/700
+100000/100000 [==============================] - 43s - loss: 0.1943    
+Epoch 224/700
+100000/100000 [==============================] - 43s - loss: 0.1913    
+Epoch 225/700
+100000/100000 [==============================] - 43s - loss: 0.1925    
+Epoch 226/700
+100000/100000 [==============================] - 43s - loss: 0.1892    
+Epoch 227/700
+100000/100000 [==============================] - 43s - loss: 0.1875    
+Epoch 228/700
+100000/100000 [==============================] - 43s - loss: 0.1887    
+Epoch 229/700
+100000/100000 [==============================] - 43s - loss: 0.1864    
+Epoch 230/700
+100000/100000 [==============================] - 43s - loss: 0.1882    
+Epoch 231/700
+100000/100000 [==============================] - 43s - loss: 0.1848    
+Epoch 232/700
+100000/100000 [==============================] - 43s - loss: 0.1852    
+Epoch 233/700
+100000/100000 [==============================] - 43s - loss: 0.1869    
+Epoch 234/700
+100000/100000 [==============================] - 43s - loss: 0.1841    
+Epoch 235/700
+100000/100000 [==============================] - 43s - loss: 0.1809    
+Epoch 236/700
+100000/100000 [==============================] - 43s - loss: 0.1797    
+Epoch 237/700
+100000/100000 [==============================] - 43s - loss: 0.1795    
+Epoch 238/700
+100000/100000 [==============================] - 43s - loss: 0.1788    
+Epoch 239/700
+100000/100000 [==============================] - 43s - loss: 0.1781    
+Epoch 240/700
+100000/100000 [==============================] - 43s - loss: 0.1778    
+Epoch 241/700
+100000/100000 [==============================] - 43s - loss: 0.1795    
+Epoch 242/700
+100000/100000 [==============================] - 43s - loss: 0.1775    
+Epoch 243/700
+100000/100000 [==============================] - 43s - loss: 0.1782    
+Epoch 244/700
+100000/100000 [==============================] - 43s - loss: 0.1777    
+Epoch 245/700
+100000/100000 [==============================] - 43s - loss: 0.1773    
+Epoch 246/700
+100000/100000 [==============================] - 43s - loss: 0.1763    
+Epoch 247/700
+100000/100000 [==============================] - 43s - loss: 0.1749    
+Epoch 248/700
+100000/100000 [==============================] - 43s - loss: 0.1721    
+Epoch 249/700
+100000/100000 [==============================] - 43s - loss: 0.1750    
+Epoch 250/700
+100000/100000 [==============================] - 43s - loss: 0.1725    
+Epoch 251/700
+100000/100000 [==============================] - 43s - loss: 0.1740    
+Epoch 252/700
+100000/100000 [==============================] - 43s - loss: 0.1713    
+Epoch 253/700
+100000/100000 [==============================] - 43s - loss: 0.1701    
+Epoch 254/700
+100000/100000 [==============================] - 43s - loss: 0.1689    
+Epoch 255/700
+100000/100000 [==============================] - 43s - loss: 0.1688    
+Epoch 256/700
+100000/100000 [==============================] - 43s - loss: 0.1697    
+Epoch 257/700
+100000/100000 [==============================] - 43s - loss: 0.1731    
+Epoch 258/700
+100000/100000 [==============================] - 43s - loss: 0.1701    
+Epoch 259/700
+100000/100000 [==============================] - 43s - loss: 0.1680    
+Epoch 260/700
+100000/100000 [==============================] - 43s - loss: 0.1717    
+Epoch 261/700
+100000/100000 [==============================] - 43s - loss: 0.1663    
+Epoch 262/700
+100000/100000 [==============================] - 43s - loss: 0.1677    
+Epoch 263/700
+100000/100000 [==============================] - 43s - loss: 0.1674    
+Epoch 264/700
+100000/100000 [==============================] - 43s - loss: 0.1664    
+Epoch 265/700
+100000/100000 [==============================] - 43s - loss: 0.1641    
+Epoch 266/700
+100000/100000 [==============================] - 43s - loss: 0.1632    
+Epoch 267/700
+100000/100000 [==============================] - 43s - loss: 0.1650    
+Epoch 268/700
+100000/100000 [==============================] - 43s - loss: 0.1637    
+Epoch 269/700
+100000/100000 [==============================] - 43s - loss: 0.1636    
+Epoch 270/700
+100000/100000 [==============================] - 43s - loss: 0.1618    
+Epoch 271/700
+100000/100000 [==============================] - 43s - loss: 0.1620    
+Epoch 272/700
+100000/100000 [==============================] - 43s - loss: 0.1590    
+Epoch 273/700
+100000/100000 [==============================] - 43s - loss: 0.1636    
+Epoch 274/700
+100000/100000 [==============================] - 43s - loss: 0.1616    
+Epoch 275/700
+100000/100000 [==============================] - 43s - loss: 0.1601    
+Epoch 276/700
+100000/100000 [==============================] - 43s - loss: 0.1582    
+Epoch 277/700
+100000/100000 [==============================] - 43s - loss: 0.1580    
+Epoch 278/700
+100000/100000 [==============================] - 43s - loss: 0.1582    
+Epoch 279/700
+100000/100000 [==============================] - 43s - loss: 0.1560    
+Epoch 280/700
+100000/100000 [==============================] - 43s - loss: 0.1544    
+Epoch 281/700
+100000/100000 [==============================] - 43s - loss: 0.1559    
+Epoch 282/700
+100000/100000 [==============================] - 43s - loss: 0.1565    
+Epoch 283/700
+100000/100000 [==============================] - 43s - loss: 0.1572    
+Epoch 284/700
+100000/100000 [==============================] - 43s - loss: 0.1557    
+Epoch 285/700
+100000/100000 [==============================] - 43s - loss: 0.1561    
+Epoch 286/700
+100000/100000 [==============================] - 43s - loss: 0.1537    
+Epoch 287/700
+100000/100000 [==============================] - 43s - loss: 0.1537    
+Epoch 288/700
+100000/100000 [==============================] - 43s - loss: 0.1550    
+Epoch 289/700
+100000/100000 [==============================] - 43s - loss: 0.1522    
+Epoch 290/700
+100000/100000 [==============================] - 43s - loss: 0.1499    
+Epoch 291/700
+100000/100000 [==============================] - 43s - loss: 0.1496    
+Epoch 292/700
+100000/100000 [==============================] - 43s - loss: 0.1521    
+Epoch 293/700
+100000/100000 [==============================] - 43s - loss: 0.1471    
+Epoch 294/700
+100000/100000 [==============================] - 43s - loss: 0.1476    
+Epoch 295/700
+100000/100000 [==============================] - 43s - loss: 0.1507    
+Epoch 296/700
+100000/100000 [==============================] - 43s - loss: 0.1490    
+Epoch 297/700
+100000/100000 [==============================] - 43s - loss: 0.1499    
+Epoch 298/700
+100000/100000 [==============================] - 43s - loss: 0.1489    
+Epoch 299/700
+100000/100000 [==============================] - 43s - loss: 0.1508    
+Epoch 300/700
+100000/100000 [==============================] - 43s - loss: 0.1493    
+Epoch 301/700
+100000/100000 [==============================] - 43s - loss: 0.1481    
+Epoch 302/700
+100000/100000 [==============================] - 43s - loss: 0.1489    
+Epoch 303/700
+100000/100000 [==============================] - 43s - loss: 0.1501    
+Epoch 304/700
+100000/100000 [==============================] - 43s - loss: 0.1459    
+Epoch 305/700
+100000/100000 [==============================] - 43s - loss: 0.1477    
+Epoch 306/700
+100000/100000 [==============================] - 43s - loss: 0.1475    
+Epoch 307/700
+100000/100000 [==============================] - 43s - loss: 0.1464    
+Epoch 308/700
+100000/100000 [==============================] - 43s - loss: 0.1454    
+Epoch 309/700
+100000/100000 [==============================] - 43s - loss: 0.1475    
+Epoch 310/700
+100000/100000 [==============================] - 43s - loss: 0.1458    
+Epoch 311/700
+100000/100000 [==============================] - 43s - loss: 0.1457    
+Epoch 312/700
+100000/100000 [==============================] - 43s - loss: 0.1440    
+Epoch 313/700
+100000/100000 [==============================] - 43s - loss: 0.1470    
+Epoch 314/700
+100000/100000 [==============================] - 43s - loss: 0.1451    
+Epoch 315/700
+100000/100000 [==============================] - 43s - loss: 0.1447    
+Epoch 316/700
+100000/100000 [==============================] - 43s - loss: 0.1450    
+Epoch 317/700
+100000/100000 [==============================] - 43s - loss: 0.1418    
+Epoch 318/700
+100000/100000 [==============================] - 43s - loss: 0.1420    
+Epoch 319/700
+100000/100000 [==============================] - 43s - loss: 0.1412    
+Epoch 320/700
+100000/100000 [==============================] - 43s - loss: 0.1413    
+Epoch 321/700
+100000/100000 [==============================] - 43s - loss: 0.1399    
+Epoch 322/700
+100000/100000 [==============================] - 43s - loss: 0.1427    
+Epoch 323/700
+100000/100000 [==============================] - 43s - loss: 0.1411    
+Epoch 324/700
+100000/100000 [==============================] - 43s - loss: 0.1424    
+Epoch 325/700
+100000/100000 [==============================] - 43s - loss: 0.1421    
+Epoch 326/700
+100000/100000 [==============================] - 43s - loss: 0.1392    
+Epoch 327/700
+100000/100000 [==============================] - 43s - loss: 0.1399    
+Epoch 328/700
+100000/100000 [==============================] - 43s - loss: 0.1402    
+Epoch 329/700
+100000/100000 [==============================] - 43s - loss: 0.1390    
+Epoch 330/700
+100000/100000 [==============================] - 43s - loss: 0.1396    
+Epoch 331/700
+100000/100000 [==============================] - 43s - loss: 0.1387    
+Epoch 332/700
+100000/100000 [==============================] - 43s - loss: 0.1384    
+Epoch 333/700
+100000/100000 [==============================] - 43s - loss: 0.1404    
+Epoch 334/700
+100000/100000 [==============================] - 43s - loss: 0.1350    
+Epoch 335/700
+100000/100000 [==============================] - 43s - loss: 0.1359    
+Epoch 336/700
+100000/100000 [==============================] - 43s - loss: 0.1331    
+Epoch 337/700
+100000/100000 [==============================] - 43s - loss: 0.1362    
+Epoch 338/700
+100000/100000 [==============================] - 43s - loss: 0.1353    
+Epoch 339/700
+100000/100000 [==============================] - 43s - loss: 0.1339    
+Epoch 340/700
+100000/100000 [==============================] - 43s - loss: 0.1329    
+Epoch 341/700
+100000/100000 [==============================] - 43s - loss: 0.1359    
+Epoch 342/700
+100000/100000 [==============================] - 43s - loss: 0.1324    
+Epoch 343/700
+100000/100000 [==============================] - 43s - loss: 0.1312    
+Epoch 344/700
+100000/100000 [==============================] - 43s - loss: 0.1369    
+Epoch 345/700
+100000/100000 [==============================] - 43s - loss: 0.1340    
+Epoch 346/700
+100000/100000 [==============================] - 43s - loss: 0.1322    
+Epoch 347/700
+100000/100000 [==============================] - 43s - loss: 0.1315    
+Epoch 348/700
+100000/100000 [==============================] - 43s - loss: 0.1332    
+Epoch 349/700
+100000/100000 [==============================] - 43s - loss: 0.1324    
+Epoch 350/700
+100000/100000 [==============================] - 43s - loss: 0.1290    
+Epoch 351/700
+100000/100000 [==============================] - 43s - loss: 0.1321    
+Epoch 352/700
+100000/100000 [==============================] - 43s - loss: 0.1332    
+Epoch 353/700
+100000/100000 [==============================] - 43s - loss: 0.1293    
+Epoch 354/700
+100000/100000 [==============================] - 43s - loss: 0.1317    
+Epoch 355/700
+100000/100000 [==============================] - 43s - loss: 0.1307    
+Epoch 356/700
+100000/100000 [==============================] - 43s - loss: 0.1307    
+Epoch 358/700
+100000/100000 [==============================] - 43s - loss: 0.1312    
+Epoch 359/700
+100000/100000 [==============================] - 43s - loss: 0.1300    
+Epoch 360/700
+100000/100000 [==============================] - 43s - loss: 0.1300    
+Epoch 361/700
+100000/100000 [==============================] - 43s - loss: 0.1269    
+Epoch 362/700
+100000/100000 [==============================] - 43s - loss: 0.1310    
+Epoch 363/700
+100000/100000 [==============================] - 43s - loss: 0.1306    
+Epoch 364/700
+100000/100000 [==============================] - 43s - loss: 0.1289    
+Epoch 365/700
+100000/100000 [==============================] - 43s - loss: 0.1271    
+Epoch 366/700
+100000/100000 [==============================] - 43s - loss: 0.1305    
+Epoch 367/700
+100000/100000 [==============================] - 43s - loss: 0.1287    
+Epoch 368/700
+100000/100000 [==============================] - 43s - loss: 0.1262    
+Epoch 369/700
+100000/100000 [==============================] - 43s - loss: 0.1252    
+Epoch 370/700
+100000/100000 [==============================] - 43s - loss: 0.1269    
+Epoch 371/700
+100000/100000 [==============================] - 43s - loss: 0.1278    
+Epoch 372/700
+100000/100000 [==============================] - 43s - loss: 0.1253    
+Epoch 373/700
+100000/100000 [==============================] - 43s - loss: 0.1272    
+Epoch 374/700
+100000/100000 [==============================] - 43s - loss: 0.1279    
+Epoch 375/700
+100000/100000 [==============================] - 43s - loss: 0.1245    
+Epoch 376/700
+100000/100000 [==============================] - 43s - loss: 0.1236    
+Epoch 377/700
+100000/100000 [==============================] - 43s - loss: 0.1238    
+Epoch 378/700
+100000/100000 [==============================] - 43s - loss: 0.1252    
+Epoch 379/700
+100000/100000 [==============================] - 43s - loss: 0.1241    
+Epoch 380/700
+100000/100000 [==============================] - 43s - loss: 0.1273    
+Epoch 381/700
+100000/100000 [==============================] - 43s - loss: 0.1226    
+Epoch 382/700
+100000/100000 [==============================] - 43s - loss: 0.1231    
+Epoch 383/700
+100000/100000 [==============================] - 43s - loss: 0.1228    
+Epoch 384/700
+100000/100000 [==============================] - 43s - loss: 0.1252    
+Epoch 385/700
+100000/100000 [==============================] - 43s - loss: 0.1250    
+Epoch 386/700
+100000/100000 [==============================] - 43s - loss: 0.1253    
+Epoch 387/700
+100000/100000 [==============================] - 43s - loss: 0.1199    
+Epoch 388/700
+100000/100000 [==============================] - 43s - loss: 0.1218    
+Epoch 389/700
+100000/100000 [==============================] - 43s - loss: 0.1230    
+Epoch 390/700
+100000/100000 [==============================] - 43s - loss: 0.1200    
+Epoch 391/700
+100000/100000 [==============================] - 43s - loss: 0.1240    
+Epoch 392/700
+100000/100000 [==============================] - 43s - loss: 0.1218    
+Epoch 393/700
+100000/100000 [==============================] - 43s - loss: 0.1196    
+Epoch 394/700
+100000/100000 [==============================] - 43s - loss: 0.1213    
+Epoch 395/700
+100000/100000 [==============================] - 43s - loss: 0.1205    
+Epoch 396/700
+100000/100000 [==============================] - 43s - loss: 0.1223    
+Epoch 397/700
+100000/100000 [==============================] - 43s - loss: 0.1219    
+Epoch 398/700
+100000/100000 [==============================] - 43s - loss: 0.1189    
+Epoch 399/700
+100000/100000 [==============================] - 43s - loss: 0.1219    
+Epoch 400/700
+100000/100000 [==============================] - 43s - loss: 0.1202    
+Epoch 401/700
+100000/100000 [==============================] - 43s - loss: 0.1214    
+Epoch 402/700
+100000/100000 [==============================] - 43s - loss: 0.1191    
+Epoch 403/700
+100000/100000 [==============================] - 43s - loss: 0.1224    
+Epoch 404/700
+100000/100000 [==============================] - 43s - loss: 0.1192    
+Epoch 405/700
+100000/100000 [==============================] - 43s - loss: 0.1191    
+Epoch 406/700
+100000/100000 [==============================] - 43s - loss: 0.1172    
+Epoch 407/700
+100000/100000 [==============================] - 43s - loss: 0.1152    
+Epoch 408/700
+100000/100000 [==============================] - 43s - loss: 0.1175    
+Epoch 409/700
+100000/100000 [==============================] - 43s - loss: 0.1197    
+Epoch 410/700
+100000/100000 [==============================] - 43s - loss: 0.1196    
+Epoch 411/700
+100000/100000 [==============================] - 43s - loss: 0.1187    
+Epoch 412/700
+100000/100000 [==============================] - 43s - loss: 0.1162    
+Epoch 413/700
+100000/100000 [==============================] - 43s - loss: 0.1183    
+Epoch 414/700
+100000/100000 [==============================] - 43s - loss: 0.1179    
+Epoch 415/700
+100000/100000 [==============================] - 43s - loss: 0.1192    
+Epoch 416/700
+100000/100000 [==============================] - 43s - loss: 0.1169    
+Epoch 417/700
+100000/100000 [==============================] - 43s - loss: 0.1166    
+Epoch 418/700
+100000/100000 [==============================] - 43s - loss: 0.1164    
+Epoch 419/700
+100000/100000 [==============================] - 43s - loss: 0.1174    
+Epoch 420/700
+100000/100000 [==============================] - 43s - loss: 0.1188    
+Epoch 421/700
+100000/100000 [==============================] - 43s - loss: 0.1160    
+Epoch 422/700
+100000/100000 [==============================] - 43s - loss: 0.1144    
+Epoch 423/700
+100000/100000 [==============================] - 43s - loss: 0.1132    
+Epoch 424/700
+100000/100000 [==============================] - 43s - loss: 0.1138    
+Epoch 425/700
+100000/100000 [==============================] - 43s - loss: 0.1147    
+Epoch 426/700
+100000/100000 [==============================] - 43s - loss: 0.1133    
+Epoch 427/700
+100000/100000 [==============================] - 43s - loss: 0.1148    
+Epoch 428/700
+100000/100000 [==============================] - 43s - loss: 0.1144    
+Epoch 429/700
+100000/100000 [==============================] - 43s - loss: 0.1147    
+Epoch 430/700
+100000/100000 [==============================] - 43s - loss: 0.1107    
+Epoch 431/700
+100000/100000 [==============================] - 43s - loss: 0.1114    
+Epoch 432/700
+100000/100000 [==============================] - 43s - loss: 0.1145    
+Epoch 433/700
+100000/100000 [==============================] - 43s - loss: 0.1119    
+Epoch 434/700
+100000/100000 [==============================] - 43s - loss: 0.1133    
+Epoch 435/700
+100000/100000 [==============================] - 43s - loss: 0.1124    
+Epoch 436/700
+100000/100000 [==============================] - 43s - loss: 0.1129    
+Epoch 437/700
+100000/100000 [==============================] - 43s - loss: 0.1136    
+Epoch 438/700
+100000/100000 [==============================] - 43s - loss: 0.1140    
+Epoch 439/700
+100000/100000 [==============================] - 43s - loss: 0.1118    
+Epoch 440/700
+100000/100000 [==============================] - 43s - loss: 0.1117    
+Epoch 441/700
+100000/100000 [==============================] - 43s - loss: 0.1145    
+Epoch 442/700
+100000/100000 [==============================] - 43s - loss: 0.1127    
+Epoch 443/700
+100000/100000 [==============================] - 43s - loss: 0.1124    
+Epoch 444/700
+100000/100000 [==============================] - 43s - loss: 0.1096    
+Epoch 445/700
+100000/100000 [==============================] - 43s - loss: 0.1122    
+Epoch 446/700
+100000/100000 [==============================] - 43s - loss: 0.1094    
+Epoch 447/700
+100000/100000 [==============================] - 43s - loss: 0.1110    
+Epoch 448/700
+100000/100000 [==============================] - 43s - loss: 0.1113    
+Epoch 449/700
+100000/100000 [==============================] - 43s - loss: 0.1120    
+Epoch 450/700
+100000/100000 [==============================] - 43s - loss: 0.1103    
+Epoch 451/700
+100000/100000 [==============================] - 43s - loss: 0.1099    
+Epoch 452/700
+100000/100000 [==============================] - 43s - loss: 0.1072    
+Epoch 453/700
+100000/100000 [==============================] - 43s - loss: 0.1117    
+Epoch 454/700
+100000/100000 [==============================] - 43s - loss: 0.1086    
+Epoch 455/700
+100000/100000 [==============================] - 43s - loss: 0.1106    
+Epoch 456/700
+100000/100000 [==============================] - 43s - loss: 0.1100    
+Epoch 457/700
+100000/100000 [==============================] - 43s - loss: 0.1116    
+Epoch 458/700
+100000/100000 [==============================] - 43s - loss: 0.1083    
+Epoch 459/700
+100000/100000 [==============================] - 43s - loss: 0.1089    
+Epoch 460/700
+100000/100000 [==============================] - 43s - loss: 0.1110    
+Epoch 461/700
+100000/100000 [==============================] - 43s - loss: 0.1101    
+Epoch 462/700
+100000/100000 [==============================] - 43s - loss: 0.1092    
+Epoch 463/700
+100000/100000 [==============================] - 43s - loss: 0.1073    
+Epoch 464/700
+100000/100000 [==============================] - 43s - loss: 0.1095    
+Epoch 465/700
+100000/100000 [==============================] - 43s - loss: 0.1105    
+Epoch 466/700
+100000/100000 [==============================] - 43s - loss: 0.1089    
+Epoch 467/700
+100000/100000 [==============================] - 43s - loss: 0.1094    
+Epoch 468/700
+100000/100000 [==============================] - 43s - loss: 0.1093    
+Epoch 469/700
+100000/100000 [==============================] - 43s - loss: 0.1081    
+Epoch 470/700
+100000/100000 [==============================] - 43s - loss: 0.1098    
+Epoch 471/700
+100000/100000 [==============================] - 43s - loss: 0.1085    
+Epoch 472/700
+100000/100000 [==============================] - 43s - loss: 0.1064    
+Epoch 473/700
+100000/100000 [==============================] - 43s - loss: 0.1076    
+Epoch 474/700
+100000/100000 [==============================] - 43s - loss: 0.1084    
+Epoch 475/700
+100000/100000 [==============================] - 43s - loss: 0.1080    
+Epoch 476/700
+100000/100000 [==============================] - 43s - loss: 0.1081    
+Epoch 477/700
+100000/100000 [==============================] - 43s - loss: 0.1046    
+Epoch 478/700
+100000/100000 [==============================] - 43s - loss: 0.1069    
+Epoch 479/700
+100000/100000 [==============================] - 43s - loss: 0.1079    
+Epoch 480/700
+100000/100000 [==============================] - 43s - loss: 0.1048    
+Epoch 481/700
+100000/100000 [==============================] - 43s - loss: 0.1046    
+Epoch 482/700
+100000/100000 [==============================] - 43s - loss: 0.1064    
+Epoch 483/700
+100000/100000 [==============================] - 43s - loss: 0.1067    
+Epoch 484/700
+100000/100000 [==============================] - 43s - loss: 0.1055    
+Epoch 485/700
+100000/100000 [==============================] - 43s - loss: 0.1069    
+Epoch 486/700
+100000/100000 [==============================] - 43s - loss: 0.1057    
+Epoch 487/700
+100000/100000 [==============================] - 43s - loss: 0.1046    
+Epoch 488/700
+100000/100000 [==============================] - 43s - loss: 0.1054    
+Epoch 489/700
+100000/100000 [==============================] - 43s - loss: 0.1061    
+Epoch 490/700
+100000/100000 [==============================] - 43s - loss: 0.1027    
+Epoch 491/700
+100000/100000 [==============================] - 43s - loss: 0.1019    
+Epoch 492/700
+100000/100000 [==============================] - 43s - loss: 0.1048    
+Epoch 493/700
+100000/100000 [==============================] - 43s - loss: 0.1042    
+Epoch 494/700
+100000/100000 [==============================] - 43s - loss: 0.1052    
+Epoch 495/700
+100000/100000 [==============================] - 43s - loss: 0.1067    
+Epoch 496/700
+100000/100000 [==============================] - 43s - loss: 0.1050    
+Epoch 497/700
+100000/100000 [==============================] - 43s - loss: 0.1027    
+Epoch 498/700
+100000/100000 [==============================] - 43s - loss: 0.1066    
+Epoch 499/700
+100000/100000 [==============================] - 43s - loss: 0.1041    
+Epoch 500/700
+100000/100000 [==============================] - 43s - loss: 0.1031    
+Epoch 501/700
+100000/100000 [==============================] - 43s - loss: 0.1042    
+Epoch 502/700
+100000/100000 [==============================] - 43s - loss: 0.1051    
+Epoch 503/700
+100000/100000 [==============================] - 43s - loss: 0.1045    
+Epoch 504/700
+100000/100000 [==============================] - 43s - loss: 0.1051    
+Epoch 505/700
+100000/100000 [==============================] - 43s - loss: 0.1041    
+Epoch 506/700
+100000/100000 [==============================] - 43s - loss: 0.1005    
+Epoch 507/700
+100000/100000 [==============================] - 43s - loss: 0.1056    
+Epoch 508/700
+100000/100000 [==============================] - 43s - loss: 0.1020    
+Epoch 509/700
+100000/100000 [==============================] - 43s - loss: 0.1032    
+Epoch 510/700
+100000/100000 [==============================] - 43s - loss: 0.1015    
+Epoch 511/700
+100000/100000 [==============================] - 43s - loss: 0.1019    
+Epoch 512/700
+100000/100000 [==============================] - 43s - loss: 0.1013    
+Epoch 513/700
+100000/100000 [==============================] - 43s - loss: 0.1016    
+Epoch 514/700
+100000/100000 [==============================] - 43s - loss: 0.1026    
+Epoch 515/700
+100000/100000 [==============================] - 43s - loss: 0.1021    
+Epoch 516/700
+100000/100000 [==============================] - 43s - loss: 0.1040    
+Epoch 517/700
+100000/100000 [==============================] - 43s - loss: 0.1038    
+Epoch 518/700
+100000/100000 [==============================] - 43s - loss: 0.1030    
+Epoch 519/700
+100000/100000 [==============================] - 43s - loss: 0.1003    
+Epoch 520/700
+100000/100000 [==============================] - 43s - loss: 0.1011    
+Epoch 521/700
+100000/100000 [==============================] - 43s - loss: 0.1035    
+Epoch 522/700
+100000/100000 [==============================] - 43s - loss: 0.1012    
+Epoch 523/700
+100000/100000 [==============================] - 43s - loss: 0.1007    
+Epoch 524/700
+100000/100000 [==============================] - 43s - loss: 0.0994    
+Epoch 525/700
+100000/100000 [==============================] - 43s - loss: 0.1009    
+Epoch 526/700
+100000/100000 [==============================] - 43s - loss: 0.1008    
+Epoch 527/700
+100000/100000 [==============================] - 43s - loss: 0.1018    
+Epoch 528/700
+100000/100000 [==============================] - 43s - loss: 0.1011    
+Epoch 529/700
+100000/100000 [==============================] - 43s - loss: 0.1013    
+Epoch 530/700
+100000/100000 [==============================] - 43s - loss: 0.0966    
+Epoch 531/700
+100000/100000 [==============================] - 43s - loss: 0.1004    
+Epoch 532/700
+100000/100000 [==============================] - 43s - loss: 0.1000    
+Epoch 533/700
+100000/100000 [==============================] - 43s - loss: 0.0980    
+Epoch 534/700
+100000/100000 [==============================] - 43s - loss: 0.0986    
+Epoch 535/700
+100000/100000 [==============================] - 43s - loss: 0.0991    
+Epoch 536/700
+100000/100000 [==============================] - 43s - loss: 0.1008    
+Epoch 537/700
+100000/100000 [==============================] - 43s - loss: 0.1012    
+Epoch 538/700
+100000/100000 [==============================] - 43s - loss: 0.0981    
+Epoch 539/700
+100000/100000 [==============================] - 43s - loss: 0.1003    
+Epoch 540/700
+100000/100000 [==============================] - 43s - loss: 0.0969    
+Epoch 541/700
+100000/100000 [==============================] - 43s - loss: 0.0995    
+Epoch 542/700
+100000/100000 [==============================] - 43s - loss: 0.0987    
+Epoch 543/700
+100000/100000 [==============================] - 43s - loss: 0.0991    
+Epoch 544/700
+100000/100000 [==============================] - 43s - loss: 0.0969    
+Epoch 545/700
+100000/100000 [==============================] - 43s - loss: 0.0989    
+Epoch 546/700
+100000/100000 [==============================] - 43s - loss: 0.0963    
+Epoch 547/700
+100000/100000 [==============================] - 43s - loss: 0.0980    
+Epoch 548/700
+100000/100000 [==============================] - 43s - loss: 0.0993    
+Epoch 549/700
+100000/100000 [==============================] - 43s - loss: 0.0989    
+Epoch 550/700
+100000/100000 [==============================] - 43s - loss: 0.0965    
+Epoch 551/700
+100000/100000 [==============================] - 43s - loss: 0.0951    
+Epoch 552/700
+100000/100000 [==============================] - 43s - loss: 0.0986    
+Epoch 553/700
+100000/100000 [==============================] - 43s - loss: 0.0972    
+Epoch 554/700
+100000/100000 [==============================] - 43s - loss: 0.0964    
+Epoch 555/700
+100000/100000 [==============================] - 43s - loss: 0.0980    
+Epoch 556/700
+100000/100000 [==============================] - 43s - loss: 0.0976    
+Epoch 557/700
+100000/100000 [==============================] - 43s - loss: 0.0960    
+Epoch 558/700
+100000/100000 [==============================] - 43s - loss: 0.0957    
+Epoch 559/700
+100000/100000 [==============================] - 43s - loss: 0.0996    
+Epoch 560/700
+100000/100000 [==============================] - 43s - loss: 0.0952    
+Epoch 561/700
+100000/100000 [==============================] - 43s - loss: 0.0973    
+Epoch 562/700
+100000/100000 [==============================] - 43s - loss: 0.0963    
+Epoch 563/700
+100000/100000 [==============================] - 43s - loss: 0.0976    
+Epoch 564/700
+100000/100000 [==============================] - 43s - loss: 0.0980    
+Epoch 565/700
+100000/100000 [==============================] - 43s - loss: 0.0977    
+Epoch 566/700
+100000/100000 [==============================] - 43s - loss: 0.0980    
+Epoch 567/700
+100000/100000 [==============================] - 43s - loss: 0.0956    
+Epoch 568/700
+100000/100000 [==============================] - 43s - loss: 0.0959    
+Epoch 569/700
+100000/100000 [==============================] - 43s - loss: 0.0964    
+Epoch 570/700
+100000/100000 [==============================] - 43s - loss: 0.0963    
+Epoch 571/700
+100000/100000 [==============================] - 43s - loss: 0.0971    
+Epoch 572/700
+100000/100000 [==============================] - 43s - loss: 0.0956    
+Epoch 573/700
+100000/100000 [==============================] - 43s - loss: 0.0928    
+Epoch 574/700
+100000/100000 [==============================] - 43s - loss: 0.0942    
+Epoch 575/700
+100000/100000 [==============================] - 43s - loss: 0.0965    
+Epoch 576/700
+100000/100000 [==============================] - 43s - loss: 0.0970    
+Epoch 577/700
+100000/100000 [==============================] - 43s - loss: 0.0951    
+Epoch 578/700
+100000/100000 [==============================] - 43s - loss: 0.0947    
+Epoch 579/700
+100000/100000 [==============================] - 43s - loss: 0.0948    
+Epoch 580/700
+100000/100000 [==============================] - 43s - loss: 0.0973    
+Epoch 581/700
+100000/100000 [==============================] - 43s - loss: 0.0950    
+Epoch 582/700
+100000/100000 [==============================] - 43s - loss: 0.0968    
+Epoch 583/700
+100000/100000 [==============================] - 43s - loss: 0.0952    
+Epoch 584/700
+100000/100000 [==============================] - 43s - loss: 0.0932    
+Epoch 585/700
+100000/100000 [==============================] - 43s - loss: 0.0968    
+Epoch 586/700
+100000/100000 [==============================] - 43s - loss: 0.0955    
+Epoch 587/700
+100000/100000 [==============================] - 43s - loss: 0.0930    
+Epoch 588/700
+100000/100000 [==============================] - 43s - loss: 0.0920    
+Epoch 589/700
+100000/100000 [==============================] - 43s - loss: 0.0913    
+Epoch 590/700
+100000/100000 [==============================] - 43s - loss: 0.0935    
+Epoch 591/700
+100000/100000 [==============================] - 43s - loss: 0.0926    
+Epoch 592/700
+100000/100000 [==============================] - 43s - loss: 0.0933    
+Epoch 593/700
+100000/100000 [==============================] - 43s - loss: 0.0947    
+Epoch 594/700
+100000/100000 [==============================] - 43s - loss: 0.0925    
+Epoch 595/700
+100000/100000 [==============================] - 43s - loss: 0.0943    
+Epoch 596/700
+100000/100000 [==============================] - 43s - loss: 0.0933    
+Epoch 597/700
+100000/100000 [==============================] - 43s - loss: 0.0951    
+Epoch 598/700
+100000/100000 [==============================] - 43s - loss: 0.0956    
+Epoch 599/700
+100000/100000 [==============================] - 43s - loss: 0.0896    
+Epoch 600/700
+100000/100000 [==============================] - 43s - loss: 0.0930    
+Epoch 601/700
+100000/100000 [==============================] - 43s - loss: 0.0909    
+Epoch 602/700
+100000/100000 [==============================] - 43s - loss: 0.0927    
+Epoch 603/700
+100000/100000 [==============================] - 43s - loss: 0.0944    
+Epoch 604/700
+100000/100000 [==============================] - 43s - loss: 0.0920    
+Epoch 605/700
+100000/100000 [==============================] - 43s - loss: 0.0950    
+Epoch 606/700
+100000/100000 [==============================] - 43s - loss: 0.0934    
+Epoch 607/700
+100000/100000 [==============================] - 43s - loss: 0.0921    
+Epoch 608/700
+100000/100000 [==============================] - 43s - loss: 0.0920    
+Epoch 609/700
+100000/100000 [==============================] - 43s - loss: 0.0924    
+Epoch 610/700
+100000/100000 [==============================] - 43s - loss: 0.0915    
+Epoch 611/700
+100000/100000 [==============================] - 43s - loss: 0.0929    
+Epoch 612/700
+100000/100000 [==============================] - 43s - loss: 0.0903    
+Epoch 613/700
+100000/100000 [==============================] - 43s - loss: 0.0915    
+Epoch 614/700
+100000/100000 [==============================] - 43s - loss: 0.0905    
+Epoch 615/700
+100000/100000 [==============================] - 43s - loss: 0.0925    
+Epoch 616/700
+100000/100000 [==============================] - 43s - loss: 0.0904    
+Epoch 617/700
+100000/100000 [==============================] - 43s - loss: 0.0915    
+Epoch 618/700
+100000/100000 [==============================] - 43s - loss: 0.0925    
+Epoch 619/700
+100000/100000 [==============================] - 43s - loss: 0.0902    
+Epoch 620/700
+100000/100000 [==============================] - 43s - loss: 0.0920    
+Epoch 621/700
+100000/100000 [==============================] - 43s - loss: 0.0917    
+Epoch 622/700
+100000/100000 [==============================] - 43s - loss: 0.0901    
+Epoch 623/700
+100000/100000 [==============================] - 43s - loss: 0.0915    
+Epoch 624/700
+100000/100000 [==============================] - 43s - loss: 0.0913    
+Epoch 625/700
+100000/100000 [==============================] - 43s - loss: 0.0917    
+Epoch 626/700
+100000/100000 [==============================] - 43s - loss: 0.0892    
+Epoch 627/700
+100000/100000 [==============================] - 43s - loss: 0.0905    
+Epoch 628/700
+100000/100000 [==============================] - 43s - loss: 0.0911    
+Epoch 629/700
+100000/100000 [==============================] - 43s - loss: 0.0907    
+Epoch 630/700
+100000/100000 [==============================] - 43s - loss: 0.0905    
+Epoch 631/700
+100000/100000 [==============================] - 43s - loss: 0.0895    
+Epoch 632/700
+100000/100000 [==============================] - 43s - loss: 0.0924    
+Epoch 633/700
+100000/100000 [==============================] - 43s - loss: 0.0895    
+Epoch 634/700
+100000/100000 [==============================] - 43s - loss: 0.0912    
+Epoch 635/700
+100000/100000 [==============================] - 43s - loss: 0.0891    
+Epoch 636/700
+100000/100000 [==============================] - 43s - loss: 0.0896    
+Epoch 637/700
+100000/100000 [==============================] - 43s - loss: 0.0899    
+Epoch 638/700
+100000/100000 [==============================] - 43s - loss: 0.0901    
+Epoch 639/700
+100000/100000 [==============================] - 43s - loss: 0.0901    
+Epoch 640/700
+100000/100000 [==============================] - 43s - loss: 0.0878    
+Epoch 641/700
+100000/100000 [==============================] - 43s - loss: 0.0880    
+Epoch 642/700
+100000/100000 [==============================] - 43s - loss: 0.0899    
+Epoch 643/700
+100000/100000 [==============================] - 43s - loss: 0.0904    
+Epoch 644/700
+100000/100000 [==============================] - 43s - loss: 0.0897    
+Epoch 645/700
+100000/100000 [==============================] - 43s - loss: 0.0887    
+Epoch 646/700
+100000/100000 [==============================] - 43s - loss: 0.0880    
+Epoch 647/700
+100000/100000 [==============================] - 43s - loss: 0.0905    
+Epoch 648/700
+100000/100000 [==============================] - 43s - loss: 0.0857    
+Epoch 649/700
+100000/100000 [==============================] - 43s - loss: 0.0894    
+Epoch 650/700
+100000/100000 [==============================] - 43s - loss: 0.0886    
+Epoch 651/700
+100000/100000 [==============================] - 43s - loss: 0.0868    
+Epoch 652/700
+100000/100000 [==============================] - 43s - loss: 0.0887    
+Epoch 653/700
+100000/100000 [==============================] - 43s - loss: 0.0876    
+Epoch 654/700
+100000/100000 [==============================] - 43s - loss: 0.0877    
+Epoch 655/700
+100000/100000 [==============================] - 43s - loss: 0.0898    
+Epoch 656/700
+100000/100000 [==============================] - 43s - loss: 0.0867    
+Epoch 657/700
+100000/100000 [==============================] - 43s - loss: 0.0875    
+Epoch 658/700
+100000/100000 [==============================] - 43s - loss: 0.0904    
+Epoch 659/700
+100000/100000 [==============================] - 43s - loss: 0.0888    
+Epoch 660/700
+100000/100000 [==============================] - 43s - loss: 0.0884    
+Epoch 661/700
+100000/100000 [==============================] - 43s - loss: 0.0883    
+Epoch 662/700
+100000/100000 [==============================] - 43s - loss: 0.0913    
+Epoch 663/700
+100000/100000 [==============================] - 43s - loss: 0.0863    
+Epoch 664/700
+100000/100000 [==============================] - 43s - loss: 0.0899    
+Epoch 665/700
+100000/100000 [==============================] - 43s - loss: 0.0885    
+Epoch 666/700
+100000/100000 [==============================] - 43s - loss: 0.0884    
+Epoch 667/700
+100000/100000 [==============================] - 43s - loss: 0.0853    
+Epoch 668/700
+100000/100000 [==============================] - 43s - loss: 0.0870    
+Epoch 669/700
+100000/100000 [==============================] - 43s - loss: 0.0862    
+Epoch 670/700
+100000/100000 [==============================] - 43s - loss: 0.0876    
+Epoch 671/700
+100000/100000 [==============================] - 43s - loss: 0.0871    
+Epoch 672/700
+100000/100000 [==============================] - 43s - loss: 0.0873    
+Epoch 673/700
+100000/100000 [==============================] - 43s - loss: 0.0857    
+Epoch 674/700
+100000/100000 [==============================] - 43s - loss: 0.0868    
+Epoch 675/700
+100000/100000 [==============================] - 43s - loss: 0.0883    
+Epoch 676/700
+100000/100000 [==============================] - 43s - loss: 0.0868    
+Epoch 677/700
+100000/100000 [==============================] - 43s - loss: 0.0855    
+Epoch 678/700
+100000/100000 [==============================] - 43s - loss: 0.0876    
+Epoch 679/700
+100000/100000 [==============================] - 43s - loss: 0.0900    
+Epoch 680/700
+100000/100000 [==============================] - 43s - loss: 0.0840    
+Epoch 681/700
+100000/100000 [==============================] - 43s - loss: 0.0869    
+Epoch 682/700
+100000/100000 [==============================] - 43s - loss: 0.0854    
+Epoch 683/700
+100000/100000 [==============================] - 43s - loss: 0.0867    
+Epoch 684/700
+100000/100000 [==============================] - 43s - loss: 0.0890    
+Epoch 685/700
+100000/100000 [==============================] - 43s - loss: 0.0855    
+Epoch 686/700
+100000/100000 [==============================] - 43s - loss: 0.0863    
+Epoch 687/700
+100000/100000 [==============================] - 43s - loss: 0.0893    
+Epoch 688/700
+100000/100000 [==============================] - 43s - loss: 0.0853    
+Epoch 689/700
+100000/100000 [==============================] - 43s - loss: 0.0879    
+Epoch 690/700
+100000/100000 [==============================] - 43s - loss: 0.0842    
+Epoch 691/700
+100000/100000 [==============================] - 43s - loss: 0.0864    
+Epoch 692/700
+100000/100000 [==============================] - 43s - loss: 0.0832    
+Epoch 693/700
+100000/100000 [==============================] - 43s - loss: 0.0841    
+Epoch 694/700
+100000/100000 [==============================] - 43s - loss: 0.0850    
+Epoch 695/700
+100000/100000 [==============================] - 43s - loss: 0.0854    
+Epoch 696/700
+100000/100000 [==============================] - 43s - loss: 0.0850    
+Epoch 697/700
+100000/100000 [==============================] - 43s - loss: 0.0859    
+Epoch 698/700
+100000/100000 [==============================] - 43s - loss: 0.0847    
+Epoch 699/700
+100000/100000 [==============================] - 43s - loss: 0.0848    
+Epoch 700/700
+100000/100000 [==============================] - 43s - loss: 0.0852    
 </pre>
 </div>
 </div>
@@ -16938,18 +17751,18 @@ Epoch 300/300
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[121]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># choose an input sequence and use the prediction function in the previous Python cell to predict 100 characters following it</span>
 <span class="c1"># get an appropriately sized chunk of characters from the text</span>
-<span class="n">start_inds</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">]</span>
+<span class="n">start_inds</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1006</span><span class="p">,</span> <span class="mi">2005</span><span class="p">,</span> <span class="mi">3006</span><span class="p">]</span>
 
 <span class="c1"># save output</span>
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;text_gen_output/RNN_large_textdata_output.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>  <span class="c1"># create an output file to write too</span>
 
 <span class="c1"># load weights</span>
-<span class="n">model</span><span class="o">.</span><span class="n">load_weights</span><span class="p">(</span><span class="s1">&#39;model_weights/best_RNN_large_textdata_weights.hdf5&#39;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">load_weights</span><span class="p">(</span><span class="n">weights_file</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">start_inds</span><span class="p">:</span>
     <span class="n">start_index</span> <span class="o">=</span> <span class="n">s</span>
     <span class="n">input_chars</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="n">start_index</span><span class="p">:</span> <span class="n">start_index</span> <span class="o">+</span> <span class="n">window_size</span><span class="p">]</span>
@@ -16982,34 +17795,32 @@ Epoch 300/300
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>-------------------
 
 input chars = 
-ler, of dubious and questionable memory. i had seen little of holmes lately. my marriage had drifted&#34;
+in a nature such as his. and yet there was but one woman to him, and that woman was the late irene a&#34;
 
 predicted chars = 
- ither well ppening here of heards and frout opered in our coine of hain onficed the fathing and off&#34;
+ smill shoned from his byouks. it was about for sele never scide, from the inger to wark all and a c&#34;
 
 -------------------
 
 input chars = 
-of the singular tragedy of the atkinson brothers at trincomalee, and finally of the mission which he&#34;
+account of his doings: of his summons to odessa in the case of the trepoff murder, of his clearing u&#34;
 
 predicted chars = 
- had a gold more the able, for you and we knoor wouss. however, i shall to breat gount, took they no&#34;
+p inntrattent vinion. &#34;then, what afairs have any find. you may not almes wat once as me ashented. t&#34;
 
 -------------------
 
 input chars = 
- his hands clasped behind him. to me, who knew his every mood and habit, his attitude and manner tol&#34;
+against the blind. he was pacing the room swiftly, eagerly, with his head sunk upon his chest and hi&#34;
 
 predicted chars = 
-d at hurr. then was clamped his tigning of whick hards the fore of the wind. who to-she, but the let&#34;
+s righ from his keep and flough.&#34; i here the known pontle, and me, at open!&#39; leary, with a buling ov&#34;
 
 </pre>
 </div>
